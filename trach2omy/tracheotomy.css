@@ -1,0 +1,69 @@
+:root {
+  --comic-background-bg-color: #8c8c8c;
+	--header-bg-color: #212121;
+	--page-container-bg-color: #B8B8B8;
+}
+
+body {
+  background-color: var(--comic-background-bg-color);
+  color: white;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+
+  
+  image-rendering: pixelated;
+  font-smooth: never;
+  -webkit-font-smoothing : none;
+  -moz-osx-font-smoothing: never;
+
+  position: relative
+}
+
+/* HEADER */
+header {
+  background-color: var(--header-bg-color);
+  min-height: 85px;
+  padding-left: 1em;
+  text-decoration: underline;
+
+  display: flex;
+  align-items: center;
+}
+
+/* MAIN COMIC */
+#pageContainer {
+  background-color: var(--page-container-bg-color);
+  width: fit-content;
+
+  padding: 36px 50px;
+  margin: 0 auto 4em;
+
+  z-index: 10;
+  position: relative;
+}
+
+#adjacentPages {
+  margin-top: 0.5em;
+  text-align: center;
+	font-size: 2em;
+}
+
+#footerCredits {
+  background-color: var(--comic-background-bg-color);
+  padding: 1em;
+  margin: auto;
+  max-width: 900px;
+  box-sizing: border-box;
+}
+
+/* Fake footer background */
+
+#fakeFooterBackground {
+  position: absolute;
+  background-color: black;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 360px;
+  z-index: -10;
+}
