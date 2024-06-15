@@ -44,7 +44,7 @@ header {
   width: fit-content;
   min-height: 980px;
 
-  padding: 36px 50px;
+  padding: 50px 50px 36px;
   margin: 0 auto 4em;
 
   z-index: 10;
@@ -92,8 +92,31 @@ header {
   --themeTransition: background-color 4s 2s;
 }
 
-/* MISC */
+.city {
+	background-image: url("images/CityBackground.png");
+	background-repeat: repeat-x;
+	background-position-y: calc(100% - 360px);
+  --themeTransition: background-color 4s 2s;
+}
 
+/* LOGS */
+
+.dissonancelog {
+  position: absolute;
+	background-color: #C0C0C0;
+	scrollbar-color: #8c8c8c #212121;
+  overflow: auto;
+
+  color: black;
+  border: solid black 2px;
+}
+
+.dissonancelog p {
+  margin: 0 0 1px;
+	background-color: #DCDCDC;
+}
+
+/* MISC */
 
 .floatingImage {
   position: absolute;
@@ -101,3 +124,5 @@ header {
 
 .hoverReveal { opacity: 0; }
 .hoverReveal:hover { opacity: 1; }
+
+

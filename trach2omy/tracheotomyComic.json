@@ -71,8 +71,193 @@
     {
       "img": "Ch1pt2/Ch1Pg16.png",
       "date": "2022-11-23T01:00:00Z",
-      "theme": "",
+      "theme": "dark",
       "custom": true
+    },
+    {
+      "img": "Ch1pt2/Ch1Pg17.png",
+      "date": "2022-12-03T01:00:00Z",
+      "theme":"dark"
+    },
+    {
+      "img": "Ch1pt2/Ch1Pg18.png",
+      "date": "2022-12-23T22:41:50Z",
+      "theme":"dark"
+    },
+    {
+      "img": "Ch1pt2/Ch1Pg19.png",
+      "date": "2022-12-23T22:42:41Z",
+      "theme":"dark"
+    },
+    {
+      "img": "Ch1pt2/Ch1Pg20.png",
+      "date": "2022-12-23T22:43:00Z",
+      "theme":"dark"
+    },
+    {
+      "img": "Ch1pt2/ch1Pg21.png",
+      "date": "2022-12-23T22:43:47Z",
+      "theme":"dark"
+    },
+    {
+      "img": "Ch1pt2/Ch1Pg22.png",
+      "date": "2022-12-27T21:53:23Z",
+      "theme":"dark"
+    },
+    {
+      "img": "Ch1pt2/ch1Pg23.png",
+      "date": "2022-12-27T21:53:57Z",
+      "theme":"dark"
+    },
+    {
+      "img": "Ch1pt2/Ch1Pg24.png",
+      "date": "2022-12-30T23:23:52Z",
+      "theme":"dark"
+    },
+    {
+      "img": "Ch1pt2/Ch1Pg25.png",
+      "date": "2023-01-03T00:09:52Z",
+      "theme":"dark"
+    },
+    {
+      "img": "Ch1pt2/Ch1Pg26.png",
+      "date": "2023-01-03T00:10:14Z"
+    },
+    {
+      "img": "Ch1pt2/Ch1Pg27.png",
+      "date": "2023-01-03T23:35:08Z"
+    },
+    {
+      "img": "Ch1pt2/Ch1Pg28.png",
+      "date": "2023-01-03T23:35:08Z",
+      "theme":"cityintro",
+      "custom": true
+    },
+    {
+      "img": "Ch2/Ch2Pg29.png",
+      "date": "2023-01-14T19:13:08Z",
+      "theme":"city"
+    },
+    {
+      "img": "Ch2/Ch2Pg30.png",
+      "date": "2023-01-26T19:00:40Z",
+      "theme":"city"
+    },
+    {
+      "img": "Ch2/Ch2Pg31.png",
+      "date": "2023-02-02T00:00:10Z",
+      "theme":"city"
+    },
+    {
+      "img": "Ch2/Ch2Pg32.png",
+      "date": "2023-02-02T00:00:22Z",
+      "theme":"city"
+    },
+    {
+      "img": "Ch2/Ch2Pg33WhoopsForgotTheOverlay.png",
+      "date": "2023-02-24T16:00:50Z",
+      "theme":"city"
+
+    },
+    {
+      "img": "Ch2/Ch2Pg34.png",
+      "date": "2023-04-16T18:00:50Z",
+      "theme":"city",
+      "custom": true
+    },
+    {
+      "img": "Ch2/Ch2Pg35.png",
+      "date": "2023-07-25T19:37:00Z",
+      "theme":"city",
+      "custom": true
+    },
+    {
+      "img": "Ch2/Ch2Pg36.png",
+      "date": "2023-07-25T19:37:01Z",
+      "theme":"city",
+      "custom": true
+    },
+    {
+      "img": "Ch2/Ch2Pg37.png",
+      "date": "2023-07-25T19:37:02Z",
+      "theme":"city",
+      "custom": true
+    },
+    {
+      "img": "Ch2/Ch2Pg38.png",
+      "date": "2023-07-25T19:37:03Z",
+      "theme":"city",
+      "custom": true
+    },
+    {
+      "img": "Ch2/Ch2Pg39.png",
+      "date": "2023-07-25T19:37:04Z",
+      "theme":"city",
+      "custom": true
+    },
+    {
+      "img": "Ch2/Ch2Pg40.png",
+      "date": "2023-08-02T23:55:04Z",
+      "theme":"city",
+      "custom": true
+    },
+    {
+      "img": "Ch2/Ch2Pg41.png",
+      "date": "2023-09-10T04:14:04Z",
+      "theme":"city",
+      "custom": true
+    },
+    {
+      "img": "Ch2/Ch2Pg42.png",
+      "date": "2023-11-14T23:46:53Z",
+      "theme":"city",
+      "custom": true
+    },
+    {
+      "img": "Ch2/Ch2Pg43.png",
+      "date": "2023-11-14T23:47:15Z",
+      "theme":"city",
+      "custom": true
+    },
+    {
+      "img": "Ch2/CH2Pg44.png",
+      "date": "2023-11-14T23:49:50Z"
+    },
+    {
+      "img": "Ch2/CH2Pg45.png",
+      "date": "2023-11-14T23:49:57Z",
+      "theme":"city",
+      "ambience": "Sound/Ambience/Dare/1_sky_traffic_from_balcony.mp3"
+    },
+    {
+      "img": "Ch3/Ch3prelude1.png",
+      "date": "2023-12-15T22:16:50Z",
+      "theme":"city",
+      "ambience": "Sound/Ambience/Dare/1_sky_traffic_from_balcony.mp3"
+    },
+    {
+      "img": "Ch3/Ch3prelude2.png",
+      "date": "2024-01-19T11:57:50Z",
+      "theme":"",
+      "ambience": "Sound/Ambience/Dare/2_sky_traffic_from_living_room.mp3"
+    },
+    {
+      "img": "Ch3/Ch3prelude3.png",
+      "date": "2024-02-09T17:23:50Z",
+      "theme":"",
+      "ambience": "Sound/Ambience/Dare/2_sky_traffic_from_living_room.mp3"
+    },
+    {
+      "img": "Ch3/Ch3prelude4.png",
+      "date": "2024-02-19T04:23:56Z",
+      "theme":"",
+      "ambience": "Sound/Ambience/Dare/3_sky_traffic_from_bedroomm.mp3"
+    },
+    {
+      "img": "Ch3/Ch3prelude5.png",
+      "date": "2024-04-09T02:22:04Z",
+      "theme":"",
+      "ambience": "Sound/Ambience/Dare/4_sky_traffic_from_computer.mp3"
     }
   ]
 }

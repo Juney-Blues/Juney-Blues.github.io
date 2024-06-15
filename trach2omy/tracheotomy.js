@@ -1,4 +1,10 @@
 
+// Usernames
+const knownUsers = {
+  yellow: {color: "#cfa630", username: "Laikaboss7008"},
+  teal: {color: "#007880", username: "SpringInsect113"},
+}
+
 // LOAD COMIC OBJECT
 let comicObject
 let subPage = "/trach2omy"
@@ -24,8 +30,11 @@ const loadPage = async () => {
   // LOAD PAGE
   if ("custom" in page) {
     // Load custom page
-    const pageHtml = await fetch(`./customPages/${pageIndex}.html`).then(e => e.text())
+    let pageHtml = await fetch(`./customPages/${pageIndex}.html`).then(e => e.text())
+    pageHtml = pageHtml.replace("MAINIMAGE", comicObject.linkPrefix + page.img)
     document.getElementById("pageContent").innerHTML = pageHtml 
+
+    initCustomPage()
   } else {
     // Load basic page
     let img = document.createElement("img")
@@ -59,9 +68,32 @@ const loadPage = async () => {
   window.scrollTo(0, 0);
 }
 
+// Init custom page events
+const initCustomPage = () => {
+
+  // Check for dissonancelog
+  const dissonancelogs = document.querySelectorAll(".dissonancelog")
+
+  dissonancelogs.forEach(log => {
+    let prevUser = ""
+
+    log.querySelectorAll("p").forEach(msg => {
+      let user = msg.dataset.user
+      if (prevUser != user) {
+        let knownUser = knownUsers[user]
+
+        msg.innerHTML = `<b style="color: ${knownUser.color}">${knownUser.username}:</b> <br>` + msg.innerHTML
+        msg.className = "newMsgUser"
+
+      }
+      prevUser = user
+    })
+  })
+
+}
+
 // Handle click events
 const clickLink = (event, link) => {
-  console.log(link)
   event.preventDefault()
   history.pushState(null, '', link)
   loadPage()
