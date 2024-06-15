@@ -1,0 +1,31 @@
+
+
+body {
+	background-image: url("https://file.garden/Y5hdfT_qkQx7G08g/Tracheotomy/Desktops/AprilMay/Foreground.png");
+	background-position: top;
+	background-repeat: no-repeat;
+	background-color: black;
+	image-rendering: pixelated;
+}
+
+.desktoparea{
+	position:relative;
+	margin: 100px auto;
+	background-image: url("https://file.garden/Y5hdfT_qkQx7G08g/Tracheotomy/Desktops/AprilMay/DesktopBG.png");
+	cursor: url("https://file.garden/Y5hdfT_qkQx7G08g/Tracheotomy/Desktops/AprilMay/Cursor.png"), auto;
+	width: 960px;
+	height: 720px;
+	overflow: hidden;
+}
+
+.taskbar{
+	position:absolute;
+	left:0;
+	bottom: 0;
+	height: 32px;
+	width: 100%;
+	background-color: #b3b3b3;
+	border-top: solid;
+	border-width: 2px;
+	border-top-color: black;
+}

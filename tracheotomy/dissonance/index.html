@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch As I Perform My Own Tracheotomy.</title>
+	<link rel="shortcut icon" type="image/png" href="https://file.garden/Y5hdfT_qkQx7G08g/Tracheotomy/FavIcon.png">
+    <link href="../style.css" rel="stylesheet" type="text/css" media="all">
+	
+ </head>
+  
+  <body>
+	<div class="window" id="mydiv" style="top: 32px; left: 640px; width: 1200px; height: 820px;">
+		<div class="window-header" id="mydivheader"><b>Dissonance</b> - version 1.301</div>
+			<div class="dissonancelog" style="top: 32px; width:100%; height:96%; position:static;">
+			
+			</div>
+			<input style="width: 98%; font-family: courier new; position: absolute; bottom:0;"></input>
+	</div>
+	
+	<div class="window" id="mydiv" style="top: 32px; left: 12px; width: 1200px; height: 820px;">
+		<div class="window-header" id="mydivheader"><b>Dissonance</b> - version 1.301</div>
+			<textarea name="input" id="input" style="resize:none; width:100%; height:788px;"></textarea>
+	</div>
+  
+  <div class="window" id="mydiv" style="top: 32px; left: 64px; width: 400px; height: 820px; display:none;">
+	<div class="window-header" id="mydivheader"><b>Dissonance</b> - version 1.301</div>
+		<p><i>logged in as</i>
+		<select name="usernames" id="usernames" class="teal" style="background-color: black; border-style: solid;">
+			<option value="SpringInsect113" class="teal">SpringInsect113</option>
+			<option value="Laikaboss7008" class="yellow">Laikaboss7008</option>
+			<option value="Callirockin" class="blue">Callirockin</option>
+			<option value="TheOneTrueGamer" class="pink">TheOneTrueGamer</option>
+			<option value="writer">writer</option>
+		</select>
+		<p style="font-size:20px;">-FriendList-</p>
+	</div>
+  </body>
+  
+  <script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+ </html>
