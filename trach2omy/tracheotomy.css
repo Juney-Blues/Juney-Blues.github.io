@@ -2,10 +2,14 @@
   --comic-background-bg-color: #8c8c8c;
 	--header-bg-color: #212121;
 	--page-container-bg-color: #B8B8B8;
+
+  --themeTransition: background-color 4s 2s;
 }
 
 body {
-  background-color: var(--comic-background-bg-color);
+  background-color: var(--comic-background-bg-color, black);
+  transition: var(--themeTransition);
+  
   color: white;
   margin: 0;
   font-family: 'Courier New', Courier, monospace;
@@ -22,6 +26,8 @@ body {
 /* HEADER */
 header {
   background-color: var(--header-bg-color);
+  transition: var(--themeTransition);
+  
   min-height: 85px;
   padding-left: 1em;
   text-decoration: underline;
@@ -33,7 +39,10 @@ header {
 /* MAIN COMIC */
 #pageContainer {
   background-color: var(--page-container-bg-color);
+  transition: var(--themeTransition);
+  
   width: fit-content;
+  min-height: 980px;
 
   padding: 36px 50px;
   margin: 0 auto 4em;
@@ -50,6 +59,8 @@ header {
 
 #footerCredits {
   background-color: var(--comic-background-bg-color);
+  transition: var(--themeTransition);
+  
   padding: 1em;
   margin: auto;
   max-width: 900px;
@@ -59,11 +70,34 @@ header {
 /* Fake footer background */
 
 #fakeFooterBackground {
+  background-color: var(--header-bg-color);
+  transition: var(--themeTransition);
+  
   position: absolute;
-  background-color: black;
   left: 0;
   right: 0;
   bottom: 0;
   height: 360px;
   z-index: -10;
 }
+
+/* ====== */
+/* THEMES */
+/* ====== */
+
+.dark {
+  --comic-background-bg-color: black;
+  --header-bg-color: #212121;
+  --page-container-bg-color: black;
+  --themeTransition: background-color 4s 2s;
+}
+
+/* MISC */
+
+
+.floatingImage {
+  position: absolute;
+}
+
+.hoverReveal { opacity: 0; }
+.hoverReveal:hover { opacity: 1; }

@@ -19,16 +19,15 @@
     <div id="pageContainer">
 
       <div id="pageContent">
-        <img src="https://file.garden/Y5hdfT_qkQx7G08g/Tracheotomy/Ch1/Ch1Pg1.gif" alt="">
       </div>
 
       <div id="pageNavigation">
         <div id="adjacentPages">
-          <a id="nextPage">&lt;--</a>
-          <a id="prevPage">--&gt;</a>
+          <a id="prevPage" class="pageLink">&lt;--</a>
+          <a id="nextPage" class="pageLink">--&gt;</a>
         </div>
 
-        <a id="startOver">Start Over.</a>
+        <a id="startOver" class="pageLink" href="/trach2omy?/pg=0">Start Over.</a>
       </div>
 
     </div>
@@ -44,7 +43,7 @@
   </div>
 
   <div id="fakeFooterBackground">
-    
+
   </div>
 
   <!-- Hidden -->
@@ -55,6 +54,11 @@
 
     <audio id="backgroundAmbienceA" autoplay loop></audio>
     <audio id="backgroundAmbienceB" autoplay loop></audio>
+
+    <img src="" alt="" id="preloadNext">
+    <img src="" alt="" id="preloadPrev">
+
+    <script src="./tracheotomy.js"></script>
 
   </div>
 
