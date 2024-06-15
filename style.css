@@ -1,0 +1,277 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+body {
+  
+  background-color: #005682;
+  color: black;
+  font-family: Courier;
+  background-image: linear-gradient(rgb(12,17,37), black);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.scrollingchecker body{
+  background-color: #005682;
+  color: black;
+  font-family: Courier;
+    background-image: linear-gradient(45deg, #007880 25%, transparent 25%), linear-gradient(-45deg, #007880 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #007880 75%), linear-gradient(-45deg, transparent 75%, #007880 75%);
+  background-size: 40px 40px;
+  
+  background-repeat: repeat;
+  background-attachment: fixed;
+  animation-name: bgscroll;
+  animation-iteration-count: infinite;
+   animation-timing-function: linear; 
+  animation-duration: 30s;
+}
+
+@keyframes bgscroll{
+  from{  background-position: bottom;}
+  to {  background-position: top;}
+}
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.iframeheader {
+  position: absolute;
+  width: 100%;
+  top:0;
+  left:0;
+  margin: 0;
+  height:120px;
+  }
+.header {
+  position: absolute;
+  width: 100%;
+  top:0;
+  left:0;
+  margin: 0;
+  padding: 0px;
+  text-align: left;
+  background-color: #007880;
+  color: white;
+  }
+.subheader {
+  position: fixed;
+  width: 100%;
+  padding: 2px;
+  left:0;
+  text-align: left;
+  background-color: #134955;
+  color: white;
+  }
+.headerlinks {
+  position: fixed;
+  width: 100%;
+  text-align: right;
+  padding-right: 4px;
+  color: white;
+}
+
+.textbox {
+  position: relative;
+  display: block;
+  width: 1900px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #007880;
+  color: white;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #134955;
+  padding: 8px;
+  z-index: 6;
+}
+
+.marqueebox {
+  position: relative;
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  color: white;
+  border-style: solid;
+  border-width: 8px;
+  border-color: #bdbdbd;
+  z-index: 6;
+}
+.comictabcontainer{
+  display: flex;
+  width:80%;
+  margin-top:120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.comictab {
+	position: relative;
+	width:20%;
+	height:100%;
+	transition: bottom 0.1s;
+}
+.high{
+	bottom:0;
+}
+.medium{
+	bottom:-40px;
+}
+.low{
+	bottom: -80px;
+}
+
+.medium:hover{
+	bottom:-20px;
+}
+.low:hover{
+	bottom: -60px;
+}
+.parallelogram {
+  position:absolute;
+  bottom:0;
+  width: 100%;
+  height:160px;
+  background-color: white;
+  transform: skew(20deg);
+  z-index: 5;
+  cursor: pointer;
+}
+.gallery-image-container {
+  display:flex;
+  position: relative;
+  max-width: fit-content;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #007880;
+  color: white;
+  border-style: solid;
+  border-width: 8px;
+  border-color: #134955;
+  z-index: 6;
+  padding:12px;
+}
+.gallery-container {
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+  grid-auto-rows: minmax(100px, auto);
+  max-width:100%;
+  position: relative;
+  justify-content: center;
+  padding: 1em;
+  gap: 1em;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  color: white;
+  border-style: solid;
+  border-width: 8px;
+  border-color: #002025;
+  z-index: 6;
+}
+
+.art-gallery-image {
+	image-rendering: pixelated;
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gallery-thumbnail {
+	max-height: 10em;
+	margin: auto;
+	cursor: pointer;
+}
+.gallery-thumbnail:hover {
+	outline:solid;
+}
+
+.image-fit {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.comicicon {
+  pointer-events: none; 
+  position:absolute;
+  z-index:6;
+  bottom:-40px;
+  max-width: auto;
+  min-width: 100%;
+  transition: all 0.2s;
+  }
+  
+:is(.medium, .low) .comicicon { 
+	opacity:0%;
+	transform: translateY(+40px);
+}
+
+:is(.medium:hover, .low:hover) .comicicon { 
+	opacity:100%;
+	transform: translateY(+20px);
+}
+
+h1{
+    font-size:30px;
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid transparent; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  /*margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 2.5s steps(80, end),
+    blink-caret .75s step-end 8;
+}
+/*https://css-tricks.com/snippets/css/typewriter-effect/*/
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: transparent; }
+}
+
+h2{
+	box-sizing: border-box;
+
+	padding-right:16px;
+    font-size: 16px;
+}
+h3{
+    font-size: 20px;
+}
+a{
+  color: white;
+}
+a:hover {
+  color:#bfbfbf;
+}
+
+iframe{
+  display: block;
+  outline: none;
+}
+
+main{
+  margin-top: 200px;
+}
+
+
