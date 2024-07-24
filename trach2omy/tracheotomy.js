@@ -3,6 +3,7 @@
 const knownUsers = {
   yellow: {color: "#cfa630", username: "Laikaboss7008"},
   teal: {color: "#007880", username: "SpringInsect113"},
+  none: {color: "#007880", username: ""},
 }
 
 // LOAD COMIC OBJECT
@@ -82,8 +83,10 @@ const initCustomPage = () => {
       if (prevUser != user) {
         let knownUser = knownUsers[user]
 
-        msg.innerHTML = `<b style="color: ${knownUser.color}">${knownUser.username}:</b> <br>` + msg.innerHTML
-        msg.className = "newMsgUser"
+        if (knownUser.username) {
+          msg.innerHTML = `<b style="color: ${knownUser.color}">${knownUser.username}:</b> <br>` + msg.innerHTML
+          msg.className = "newMsgUser"
+        }
 
       }
       prevUser = user
