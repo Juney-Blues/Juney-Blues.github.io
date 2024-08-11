@@ -175,4 +175,11 @@ var artList = [
 		"date": new Date("2024-04-06T19:41:48Z"),
 		"pixellated": "false",
 	},
+	{
+		"title": "If I Show My Fangs Will You Tell Me That They're Cool?",
+		"description": `haven't been able to draw in a bit! finally got something down for the first time in weeks lol`, 
+		"imgUrl": "https://file.garden/Y5hdfT_qkQx7G08g/Art/FurryStuff/mintfangs.png",
+		"date": new Date("2024-08-10T00:07:54Z"),
+		"pixellated": "true",
+	},
 ]
