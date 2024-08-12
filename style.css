@@ -5,19 +5,19 @@
 }
 
 body {
-  background-color: #005682;
-  color: black;
-  font-family: Courier;
-  background-image: linear-gradient(rgb(12,17,37), black);
-  background-repeat: no-repeat;
+  background-color:      black;
+  color:                 white;
+  font-family:           Courier;
+  background-image:      linear-gradient(#0c1125, #000b);
+  background-repeat:     repeat;
   background-attachment: fixed;
 }
 
 main{
-  margin-top: 200px;
-  max-width: 80%;
-  display: block;
-  margin-left: auto;
+  margin-top:   200px;
+  max-width:    80%;
+  display:      block;
+  margin-left:  auto;
   margin-right: auto;
 }
 
@@ -92,16 +92,18 @@ main{
   border-width: 2px;
   border-color: var(--main-accent-color, #134955);
   padding: 8px;
+  background-image: linear-gradient(#000,#000000cd),url('./images/textbox-pattern.png');
+  background-attachment: fixed,scroll;
 }
 
 .header-text{
-  font-size: 20px;
-  font-weight: bold;
+  font-size:		 20px;
+  font-weight:       bold;
   background-color:  var(--main-accent-color, #134955);
-  margin-top: -8px;
-  margin-left: -8px;
-  margin-right: -8px;
-  padding: 10px;
+  margin-top:        -8px;
+  margin-left:		 -8px;
+  margin-right: 	 -8px;
+  padding: 			 10px;
 }
 
 .blog {
@@ -113,6 +115,17 @@ main{
   width: 25%;
   float: right;
 }
+.art-preview img{
+  border-color: var(--main-bg-color, #007880);
+  border-width: 1px;
+  border-style: solid;
+  transition:   transform 0.1s;
+}
+
+.art-preview img:hover { 
+   transform: scale(1.1); 
+}
+
 
 .marqueebox {
   position: relative;
@@ -175,9 +188,11 @@ main{
   margin-left: auto;
   margin-right: auto;
   background-color: var(--main-bg-color, #007880);
+  background-image: linear-gradient(#000000b2,#000);
+  background-attachment: fixed;
   color: white;
   border-style: solid;
-  border-width: 8px;
+  border-width: 2px;
   border-color: var(--main-accent-color, #134955);
   z-index: 6;
   padding:12px;
