@@ -50,22 +50,36 @@
   </div>
   
   <div class="textbox">
-  
-    <h3 id="comicTitle"></h3>
+    <p class="header-text" id="comicTitle"></p3>
 	<p id="comicDescription"></p>
     
   </div>
+
   <br>
-  <div class="textbox">
-    
+  
+  <div class="blog textbox">
+    <p class="header-text">BLOG!</p>
     <p>incredibly work in progress!</p>
     <p>nya</p>
     
   </div>
   
+  <div class="art-preview textbox">	
+	<p class="header-text">LATEST ART!</p>
+	<a href="./art/"><p id="artPreviewImage"></p></a>
+	<p id="artPreviewTitle"</p>
+  </div>
+  
 </main>
 <script type="text/javascript" src="tracheotomy/js/pagelist.js" ></script>
 <script type="text/javascript" src="js/comicTab.js" ></script>
+<script type="text/javascript" src="js/artList.js" ></script>
+
+<script>
+	let currentArt = artList.length - 1
+	document.getElementById("artPreviewTitle").innerHTML = `<i>${artList[currentArt].title}</i>`;
+	document.getElementById("artPreviewImage").innerHTML = `<img class="art-gallery-image image-fit" src="${artList[currentArt].imgUrl}"/>`;
+</script>
 
 </body>
 </html>

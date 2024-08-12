@@ -1,9 +1,10 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
+:root {
+	--main-bg-color: #007880;
+	--main-accent-color: #134955;
+	--page-container-bg-color: #B8B8B8;
+}
 
 body {
-  
   background-color: #005682;
   color: black;
   font-family: Courier;
@@ -12,11 +13,17 @@ body {
   background-attachment: fixed;
 }
 
+main{
+  margin-top: 200px;
+  max-width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 .scrollingchecker body{
-  background-color: #005682;
-  color: black;
-  font-family: Courier;
-    background-image: linear-gradient(45deg, #007880 25%, transparent 25%), linear-gradient(-45deg, #007880 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #007880 75%), linear-gradient(-45deg, transparent 75%, #007880 75%);
+  background-image: linear-gradient(45deg, #007880 25%, transparent 25%), linear-gradient(-45deg, #007880 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #007880 75%), linear-gradient(-45deg, transparent 75%, #007880 75%);
   background-size: 40px 40px;
   
   background-repeat: repeat;
@@ -31,7 +38,6 @@ body {
   from{  background-position: bottom;}
   to {  background-position: top;}
 }
-
 
 .center {
   display: block;
@@ -48,6 +54,7 @@ body {
   margin: 0;
   height:120px;
   }
+  
 .header {
   position: absolute;
   width: 100%;
@@ -56,18 +63,20 @@ body {
   margin: 0;
   padding: 0px;
   text-align: left;
-  background-color: #007880;
+  background-color:  var(--main-bg-color, #007880);
   color: white;
   }
+  
 .subheader {
   position: fixed;
   width: 100%;
   padding: 2px;
   left:0;
   text-align: left;
-  background-color: #134955;
+  background-color: var(--main-accent-color, #134955);
   color: white;
   }
+  
 .headerlinks {
   position: fixed;
   width: 100%;
@@ -77,19 +86,32 @@ body {
 }
 
 .textbox {
-  position: relative;
-  display: block;
-  width: 1900px;
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #007880;
+  background-color: var(--main-bg-color, #007880);
   color: white;
   border-style: solid;
-  border-width: 4px;
-  border-color: #134955;
+  border-width: 2px;
+  border-color: var(--main-accent-color, #134955);
   padding: 8px;
-  z-index: 6;
+}
+
+.header-text{
+  font-size: 20px;
+  font-weight: bold;
+  background-color:  var(--main-accent-color, #134955);
+  margin-top: -8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding: 10px;
+}
+
+.blog {
+  width: 70%;
+  float: left;
+}
+
+.art-preview {
+  width: 25%;
+  float: right;
 }
 
 .marqueebox {
@@ -108,9 +130,9 @@ body {
 .comictabcontainer{
   display: flex;
   width:80%;
-  margin-top:120px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top:550px;
+  position: relative;
+  z-index: -1;
 }
 .comictab {
 	position: relative;
@@ -152,11 +174,11 @@ body {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  background-color: #007880;
+  background-color: var(--main-bg-color, #007880);
   color: white;
   border-style: solid;
   border-width: 8px;
-  border-color: #134955;
+  border-color: var(--main-accent-color, #134955);
   z-index: 6;
   padding:12px;
 }
@@ -226,6 +248,14 @@ h1{
     font-size:30px;
 }
 
+h2{
+	box-sizing: border-box;
+	padding-right:16px;
+    font-size: 16px;
+}
+
+
+
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid transparent; /* The typwriter cursor */
@@ -249,15 +279,7 @@ h1{
   50% { border-color: transparent; }
 }
 
-h2{
-	box-sizing: border-box;
 
-	padding-right:16px;
-    font-size: 16px;
-}
-h3{
-    font-size: 20px;
-}
 a{
   color: white;
 }
@@ -269,9 +291,4 @@ iframe{
   display: block;
   outline: none;
 }
-
-main{
-  margin-top: 200px;
-}
-
 
