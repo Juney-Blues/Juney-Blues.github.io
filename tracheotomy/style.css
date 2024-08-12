@@ -1,446 +1,294 @@
-body {
-  
-  background-color: #212121;
-  color: white;
-  font-family: Courier;
-  background-attachment: fixed;
-  margin: 0;
-  image-rendering: pixelated;
-  font-smooth: never;
-  -webkit-font-smoothing : none;
-  -moz-osx-font-smoothing: never;
-}
-
 :root {
-	--comic-background-bg-color: #8c8c8c;
-	--header-bg-color: #212121;
+	--main-bg-color: #007880;
+	--main-accent-color: #134955;
 	--page-container-bg-color: #B8B8B8;
 }
 
+body {
+  background-color: #005682;
+  color: black;
+  font-family: Courier;
+  background-image: linear-gradient(rgb(12,17,37), black);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
+main{
+  margin-top: 200px;
+  max-width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.scrollingchecker body{
+  background-image: linear-gradient(45deg, #007880 25%, transparent 25%), linear-gradient(-45deg, #007880 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #007880 75%), linear-gradient(-45deg, transparent 75%, #007880 75%);
+  background-size: 40px 40px;
+  
+  background-repeat: repeat;
+  background-attachment: fixed;
+  animation-name: bgscroll;
+  animation-iteration-count: infinite;
+   animation-timing-function: linear; 
+  animation-duration: 30s;
+}
+
+@keyframes bgscroll{
+  from{  background-position: bottom;}
+  to {  background-position: top;}
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.iframeheader {
+  position: absolute;
+  width: 100%;
+  top:0;
+  left:0;
+  margin: 0;
+  height:120px;
+  }
+  
 .header {
   position: absolute;
   width: 100%;
-  height:85px;
-
   top:0;
   left:0;
-  margin: auto;
-  box-sizing: border-box;
-  padding: 20px;
-  text-align: left;
-  background-color: var(--header-bg-color, #212121);
-  color: white;
-  }
-
-.footer {
-  width: 100%;
-  height: 200px;
-  left:0;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top: -64px;
-  padding-top:200px;
-  background-color: var(--header-bg-color, #212121);
-  color: white;
-  }
-.centre {
-	text-align:center;
-}
-.comicbackground{
-  background-color: var(--comic-background-bg-color, #8c8c8c);
-    padding: 0.01px;
-	margin-top: 0.01px;
-  min-height: 200px;
-  transition: background-image 4s;
-  transition: background-color 4s;
-  transition-delay: 2s;
-}
-
-.pagecontainer {
-  position: relative;
-  width: min-content;
-  min-width: 900px;
-  min-height: 980px;
-  box-sizing: border-box;
-  background-color: var(--page-container-bg-color, #B8B8B8);
-  margin-left: auto;  
-  margin-right: auto;
-  text-align: center;
-  padding-top: 36px;
-  padding-left:50px;
-  padding-right:50px;
-  
-  transition: background-color 4s;
-  transition-delay: 2s;
-}
-
-#pagecontent { 
-  min-height: 830px 
-}
-.pageimage {
-	image-rendering: pixelated;
-}
-img {
-	image-rendering: pixelated;
-}
-
-.archive-header {
-	line-height: 16px;
-	padding:8px 8px 0px 8px;
-	cursor:pointer;
-	list-style: none;
-}
-
-.archive-header:after {
-  content: '\25BA'; 
-  font-size: 13px;
-  color: white;
-  float: right;
-  margin-left: 5px;
-}
-
-details[open] > .archive-header:after {
-	 content: "\25BC";
-	 
-}
-
-.archivecontainer {
-  position: relative;
-  background-color: var(--header-bg-color, #212121);
-  margin-left: auto;
-  margin-right:auto;
-  margin-top: 20px;
-  margin-bottom:20px;
-  padding-top: 2px;
-  width: 85%;
-  max-width: 900px;
-}
-
-
-
-li {
-  list-style: none;
-  width: 100%;
   margin: 0;
-  padding: 0;
-  font-size: 1.2em;
-  font-family: courier;
-  background-color: var(--page-container-bg-color, #B8B8B8);
-}
-
-.dropdown-button {
-	
-}
-
-li:nth-of-type(odd) {
-  background: #B0B0B0;
-}
-
-ul {
-	margin-top: 8px;
-	margin-left: 0;
-	margin-right:0;
-	width:100%;
-	padding: 0;
-	background-color: var(--page-container-bg-color, #B8B8B8);
-	list-style-position: inside;
-}
-
-.navbuttoncontainer {
-	text-align:center;
-	font-size:1.75em;
-	padding-bottom:0;
-}
-
-.backtostart{
-	margin-top:-10px;
-	padding-left:8px;
-	padding-bottom:8px;
-	text-align:left;
-	
-}
-
-.creditscontainer {
-  box-sizing: border-box;
-  position: relative;
+  padding: 0px;
+  text-align: left;
+  background-color:  var(--main-bg-color, #007880);
+  color: white;
+  }
   
+.subheader {
+  position: fixed;
+  width: 100%;
+  padding: 2px;
+  left:0;
+  text-align: left;
+  background-color: var(--main-accent-color, #134955);
+  color: white;
+  }
+  
+.headerlinks {
+  position: fixed;
+  width: 100%;
+  text-align: right;
+  padding-right: 4px;
+  color: white;
+}
+
+.textbox {
+  background-color: var(--main-bg-color, #007880);
+  color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--main-accent-color, #134955);
+  padding: 8px;
+}
+
+.header-text{
+  font-size: 20px;
+  font-weight: bold;
+  background-color:  var(--main-accent-color, #134955);
+  margin-top: -8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding: 10px;
+}
+
+.blog {
+  width: 70%;
+  float: left;
+}
+
+.art-preview {
+  width: 25%;
+  float: right;
+}
+
+.marqueebox {
+  position: relative;
+  display: block;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
-  
-  padding-left: 24px;
-  padding-right:24px;
-  padding-top:16px;
-  padding-bottom:16px;
-  width: 880px;
-  background-color: var(--comic-background-bg-color, #8c8c8c);
-  
-  transition: background-color 4s;
-  transition-delay: 2s;
+  background-color: black;
+  color: white;
+  border-style: solid;
+  border-width: 8px;
+  border-color: #bdbdbd;
+  z-index: 6;
+}
+.comictabcontainer{
+  display: flex;
+  width:80%;
+  margin-top:550px;
+  position: relative;
+  z-index: -1;
+}
+.comictab {
+	position: relative;
+	width:20%;
+	height:100%;
+	transition: bottom 0.1s;
+}
+.high{
+	bottom:0;
+}
+.medium{
+	bottom:-40px;
+}
+.low{
+	bottom: -80px;
 }
 
-.dissonancelog {
-	position: absolute;
-	top:0;
-	left:0;
-	Overflow-y: scroll;
-	text-align: left;
-	
-	background-color: #C0C0C0;
-	scrollbar-color: #8c8c8c #212121;
-	color: black;
-	border-style: solid;
-	border-width: 2px;
-	border-color: black;
-	
+.medium:hover{
+	bottom:-20px;
 }
-.message{
-	background-color: #DCDCDC;
-	margin-top: 0px;
-	margin-bottom: 1px;
-	border-top: 0px solid #C0C0C0;
-	border-bottom: 1px solid #C0C0C0;
-	display:block;
-	transition: opacity 0s;
+.low:hover{
+	bottom: -60px;
+}
+.parallelogram {
+  position:absolute;
+  bottom:0;
+  width: 100%;
+  height:160px;
+  background-color: white;
+  transform: skew(20deg);
+  z-index: 5;
+  cursor: pointer;
+}
+.gallery-image-container {
+  display:flex;
+  position: relative;
+  max-width: fit-content;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--main-bg-color, #007880);
+  color: white;
+  border-style: solid;
+  border-width: 8px;
+  border-color: var(--main-accent-color, #134955);
+  z-index: 6;
+  padding:12px;
+}
+.gallery-container {
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+  grid-auto-rows: minmax(100px, auto);
+  max-width:100%;
+  position: relative;
+  justify-content: center;
+  padding: 1em;
+  gap: 1em;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  color: white;
+  border-style: solid;
+  border-width: 8px;
+  border-color: #002025;
+  z-index: 6;
 }
 
-.dialogue-choice{
-	background-color: white;
-	color: black;
-	margin-top: 1px;
-	margin-bottom: 1px;
-	border-top: 1px solid #C0C0C0;
-	border-bottom: 1px solid #C0C0C0;
-	display:block;
+.art-gallery-image {
+	image-rendering: pixelated;
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
 }
-.dialogue-choice:hover{
 
-	background-color: #8F8F8F;
-	color: white;
+.gallery-thumbnail {
+	max-height: 10em;
+	margin: auto;
 	cursor: pointer;
 }
-
-.dissonancebutton{
-	font-family: Courier;
-	text-align: Center;
-}
-/*username colors*/
-.teal {
-	color: #007880;
-}
-.pink {
-	color: #ff877f;
-}
-.yellow {
-	color: #cfa630;
-}
-.blue {
-	color: #3059cf;
+.gallery-thumbnail:hover {
+	outline:solid;
 }
 
-.underline {
-	text-decoration: underline;
+.image-fit {
+	max-width: 100%;
+	max-height: 100%;
 }
 
-.dotted-underline {
-	border-bottom: 1px dotted black;
+.comicicon {
+  pointer-events: none; 
+  position:absolute;
+  z-index:6;
+  bottom:-40px;
+  max-width: auto;
+  min-width: 100%;
+  transition: all 0.2s;
+  }
+  
+:is(.medium, .low) .comicicon { 
+	opacity:0%;
+	transform: translateY(+40px);
 }
 
-.author-note {
-	border: 1px dotted black;
+:is(.medium:hover, .low:hover) .comicicon { 
+	opacity:100%;
+	transform: translateY(+20px);
 }
 
-.tooltip {
-		
-		text-align: center;
-		position: relative;
-		left: 50%;
-		transform: translateX(-50%) translateY(-80%);
-		display: inline-block;
-		
-		border-bottom: 1px dotted black;
-	}
-	
-	.tooltip .tooltiptext {
-		visibility: hidden;
-		opacity:0;
-		width: auto;
-		background-color: black;
-		color: #fff;
-		text-align: center;
-		border-radius: 6px;
-		padding: 5px 0;
-
-		/* Position the tooltip */
-		position: absolute;
-		left: -100%;
-		top: 100%;
-		z-index: 1;
-		transition: opacity 0.2s;
-	}
-
-	.tooltip:hover .tooltiptext {
-		opacity:1;
-		visibility: visible;
-	}	
-	
-main{
-  margin-top:85px;
-}
-/*text colours*/
-.april {
-	text-shadow: 0px 1px #007880;
-}
-.adrian {
-	text-shadow: 0px 1px #ff877f;
-}
 h1{
- font-size: 16px;
- font-weight: normal;
- text-decoration: underline;
+    font-size:30px;
+}
+
+h2{
+	box-sizing: border-box;
+	padding-right:16px;
+    font-size: 16px;
 }
 
 
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid transparent; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  /*margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 2.5s steps(80, end),
+    blink-caret .75s step-end 8;
+}
+/*https://css-tricks.com/snippets/css/typewriter-effect/*/
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: transparent; }
+}
+
+
+a{
+  color: white;
+}
 a:hover {
-  color:#ffa7c9;
+  color:#bfbfbf;
 }
 
-/*make choices initially invisible*/
-.display-none{
-	display: none;
-}
-.branch {
-	opacity: 0;
-}
-.panel {
-	transition: opacity 0.5s, transform 0.5s;
-	transform:translateY(-20px);
-}
-.active{
-	transform:translateY(0px);
-	display: inherit;
-	opacity: 1;
+iframe{
+  display: block;
+  outline: none;
 }
 
-/*dissonance stuff*/
-
-.window {
-	background-color: black;
-	position:absolute;
-}
-.window-header {
-	background-color: black;
-	height: 32px;
-	cursor: default;
-}
-
-emote { white-space: nowrap }
-
-iframe { border:none }
-
-/*dark theme
-.dark .pagecontainer {
-  background-color: black;
-}
-.dark .comicbackground{
-  background-color: black;
-}
-.dark .creditscontainer {
-  background-color: #212121;
-}*/
-
-.dark body {
-	  background-color: black;
-	--comic-background-bg-color: black;
-	--header-bg-color: #212121;
-	--page-container-bg-color: black;
-}
-.dark .creditscontainer {
-   background-color: var(--header-bg-color, #8c8c8c);
-}
-/*white theme
-.white body{
-  background-color: #DCDCDC;
-}
-.white .pagecontainer {
-  background-color: white;
-}
-.white .comicbackground{
-  background-color: white;
-}
-.white .creditscontainer {
-  background-color: #DCDCDC;
-}
-.white .header {
-  background-color: #DCDCDC;
-}
-.white .footer {
-  background-color: #DCDCDC;
-}*/
-
-.white body {
-	background-color: white;
-	--comic-background-bg-color: white;
-	--header-bg-color: #DCDCDC;
-	--page-container-bg-color: white;
-}
-
-.white .creditscontainer {
-   background-color: var(--header-bg-color, #DCDCDC);
-}
-
-
-/*city theme*/
-.city .comicbackground {
-	background-image: url("images/CityBackground.png");
-	background-repeat: repeat-x;
-	background-position-y: bottom;
-}
-
-/*city intro*/
-.cityintro .comicbackground {
-	background-color: #8D8D8D;
-	background-image: url("images/CityBackground.png");
-	background-repeat: repeat-x;
-	background-position-y: bottom;
-	animation: BGfadein;
-	animation-duration:5s;
-}
-.cityintro .pagecontainer {
-  animation: pagecontainerfadein;
-  animation-duration:5s;
-}
-
-.testtesttest .pagecontainer {
-	pointer-events: auto; transform: matrix3d(0.227762, -0.203333, 0, -0.000367919, -0.0203907, 0.643679, 0, -0.0000226563, 0, 0, 1, 0, 397, 183, 0, 1); transform-origin: 0px 0px 0px;
-}
-@keyframes BGfadein { 
-	from { 
-
-		background-color: white;
-	} 
-	to { 
-
-		background-color: #8D8D8D;
-	} 
-}
-@keyframes pagecontainerfadein { 
-	from { 
-
-		background-color: white;
-	} 
-	to { 
-
-		background-color: #B8B8B8;
-	} 
-}
-@keyframes FlashFadeIn { 
-	from { 
-		opacity: 1;
-		background-color: white;
-	} 
-	to { 
-		opacity: 0;
-		background-color: transparent;
-	} 
-}
