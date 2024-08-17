@@ -1,22 +1,29 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
+:root {
+	--main-bg-color: #007880;
+	--main-accent-color: #134955;
+	--page-container-bg-color: #B8B8B8;
+}
 
 body {
-  
-  background-color: #005682;
-  color: black;
-  font-family: Courier;
-  background-image: linear-gradient(rgb(12,17,37), black);
-  background-repeat: no-repeat;
+  background-color:      black;
+  color:                 white;
+  font-family:           Courier;
+  background-image:      linear-gradient(#0c1125, #000b);
+  background-repeat:     repeat;
   background-attachment: fixed;
 }
 
+main{
+  margin-top:   200px;
+  max-width:    80%;
+  display:      block;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+
 .scrollingchecker body{
-  background-color: #005682;
-  color: black;
-  font-family: Courier;
-    background-image: linear-gradient(45deg, #007880 25%, transparent 25%), linear-gradient(-45deg, #007880 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #007880 75%), linear-gradient(-45deg, transparent 75%, #007880 75%);
+  background-image: linear-gradient(45deg, #007880 25%, transparent 25%), linear-gradient(-45deg, #007880 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #007880 75%), linear-gradient(-45deg, transparent 75%, #007880 75%);
   background-size: 40px 40px;
   
   background-repeat: repeat;
@@ -31,7 +38,6 @@ body {
   from{  background-position: bottom;}
   to {  background-position: top;}
 }
-
 
 .center {
   display: block;
@@ -48,6 +54,7 @@ body {
   margin: 0;
   height:120px;
   }
+  
 .header {
   position: absolute;
   width: 100%;
@@ -56,41 +63,90 @@ body {
   margin: 0;
   padding: 0px;
   text-align: left;
-  background-color: #007880;
+  background-color:  var(--main-bg-color, #007880);
   color: white;
   }
+  
 .subheader {
   position: fixed;
   width: 100%;
+  height:100%;
   padding: 2px;
   left:0;
   text-align: left;
-  background-color: #134955;
+  background-color: var(--main-accent-color, #134955);
   color: white;
   }
+  
+ @media only screen and (max-width: 750px) {
+	.subheader h2 {
+		display: none;
+	}
+}
+  
 .headerlinks {
   position: fixed;
   width: 100%;
   text-align: right;
   padding-right: 4px;
   color: white;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding-right: 16px;
 }
 
 .textbox {
-  position: relative;
-  display: block;
-  width: 1900px;
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #007880;
+  background-color: var(--main-bg-color, #007880);
   color: white;
   border-style: solid;
-  border-width: 4px;
-  border-color: #134955;
+  border-width: 2px;
+  border-color: var(--main-accent-color, #134955);
   padding: 8px;
-  z-index: 6;
+  background-image: linear-gradient(#000,#000000cd),url('./images/textbox-pattern.png');
+  background-attachment: fixed,scroll;
 }
+
+.blog {
+  background-image: linear-gradient(#000,#000000cd);
+  width: 77%;
+  float: left;
+}
+
+.blog-archive {
+  width: 18%;
+  float: right;
+}
+
+.header-text{
+  font-size:		 20px;
+  font-weight:       bold;
+  background-color:  var(--main-bg-color, #007880);
+  margin-top:        -8px;
+  margin-left:		 -8px;
+  margin-right: 	 -8px;
+  padding: 			 10px;
+}
+
+.blog-preview {
+  width: 70%;
+  float: left;
+}
+
+.art-preview {
+  width: 25%;
+  float: right;
+}
+.art-preview img{
+  border-color: var(--main-bg-color, #007880);
+  border-width: 1px;
+  border-style: solid;
+  transition:   transform 0.1s;
+}
+
+.art-preview img:hover { 
+   transform: scale(1.1); 
+}
+
 
 .marqueebox {
   position: relative;
@@ -108,9 +164,9 @@ body {
 .comictabcontainer{
   display: flex;
   width:80%;
-  margin-top:120px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top:550px;
+  position: relative;
+  z-index: -1;
 }
 .comictab {
 	position: relative;
@@ -152,25 +208,17 @@ body {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  background-color: #007880;
+  background-color: var(--main-bg-color, #007880);
+  background-image: linear-gradient(#000000b2,#000);
+  background-attachment: fixed;
   color: white;
   border-style: solid;
-  border-width: 8px;
-  border-color: #134955;
+  border-width: 2px;
+  border-color: var(--main-accent-color, #134955);
   z-index: 6;
   padding:12px;
 }
 .gallery-container {
-  display:grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 5px;
-  grid-auto-rows: minmax(100px, auto);
-  max-width:100%;
-  position: relative;
-  justify-content: center;
-  padding: 1em;
-  gap: 1em;
-  align-items: center;
   margin-left: auto;
   margin-right: auto;
   background-color: black;
@@ -179,6 +227,11 @@ body {
   border-width: 8px;
   border-color: #002025;
   z-index: 6;
+}
+details {
+  background-color: #020101;
+  border-style: solid;
+  border-color: #134955;
 }
 
 .art-gallery-image {
@@ -189,9 +242,10 @@ body {
 }
 
 .gallery-thumbnail {
-	max-height: 10em;
 	margin: auto;
 	cursor: pointer;
+    display: inline-block;
+	padding: 8px;
 }
 .gallery-thumbnail:hover {
 	outline:solid;
@@ -223,8 +277,16 @@ body {
 }
 
 h1{
-    font-size:30px;
+    font-size: 30px;
 }
+
+h2{
+	box-sizing: border-box;
+	padding-right:16px;
+    font-size: 16px;
+}
+
+
 
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -236,6 +298,7 @@ h1{
     typing 2.5s steps(80, end),
     blink-caret .75s step-end 8;
 }
+
 /*https://css-tricks.com/snippets/css/typewriter-effect/*/
 /* The typing effect */
 @keyframes typing {
@@ -249,15 +312,7 @@ h1{
   50% { border-color: transparent; }
 }
 
-h2{
-	box-sizing: border-box;
 
-	padding-right:16px;
-    font-size: 16px;
-}
-h3{
-    font-size: 20px;
-}
 a{
   color: white;
 }
@@ -269,9 +324,4 @@ iframe{
   display: block;
   outline: none;
 }
-
-main{
-  margin-top: 200px;
-}
-
 

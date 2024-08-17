@@ -1,5 +1,4 @@
 
-
 let currentArt = artList.length - 1
 
 artList.sort((a,b) => a.date > b.date);
@@ -27,7 +26,12 @@ artList.forEach(item => {
     let imageUrl = item.imgUrl;
 	let imageNum = artList.indexOf(item);
     let title = item.title;
-	console.log(imageUrl, imageNum);
-    galleryString = `<img loading="lazy" class="gallery-thumbnail" src=${imageUrl}-thumb.jpg onclick="setGalleryImage(${imageNum});">` + galleryString;
+	let category = item.category;
+	
+	if (document.getElementById(category) == null){
+		document.querySelector(".gallery-container").insertAdjacentHTML("afterbegin", `<details id="${category}"><summary>${category}</summary></details>`) ;
+	}
+	
+    document.getElementById(category).insertAdjacentHTML("afterbegin",`<img loading="lazy" class="gallery-thumbnail" src=${imageUrl}-thumb.jpg onclick="setGalleryImage(${imageNum});">`);
 })
-document.querySelector(".gallery-container").innerHTML = galleryString; 
+//document.querySelector(".gallery-container").innerHTML = galleryString; 
