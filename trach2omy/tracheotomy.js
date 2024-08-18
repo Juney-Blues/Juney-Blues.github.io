@@ -101,5 +101,10 @@ const clickLink = (event, link) => {
   history.pushState(null, '', link)
   loadPage()
 }
+// reload page on popstate
+window.onpopstate = (event) => {
+	loadPage();
+}
+
 
 document.querySelectorAll(".pageLink").forEach(a => { a.addEventListener("click", evt => clickLink(evt, a.href)) })
