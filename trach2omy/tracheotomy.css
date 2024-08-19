@@ -132,7 +132,7 @@ header {
 /*PAGE SPECIFIC HACKS OF SHAME */
 /*blame june for these*/
 .pg41Perktomotrix {
-  animation-duration: 5s;
+  animation-duration: 8s;
   animation-name: pg41PerktomotrixAnim;
   animation-timing-function: steps(2, end);
 }
