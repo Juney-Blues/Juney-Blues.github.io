@@ -125,4 +125,24 @@ header {
 .hoverReveal { opacity: 0; }
 .hoverReveal:hover { opacity: 1; }
 
+.display-none {
+  display: none;
+}
 
+/*PAGE SPECIFIC HACKS OF SHAME */
+/*blame june for these*/
+.pg41Perktomotrix {
+  animation-duration: 5s;
+  animation-name: pg41PerktomotrixAnim;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes pg41PerktomotrixAnim {
+  from {
+    visibility: hidden;
+  }
+
+  to {
+    visibility: visible;
+  }
+}
