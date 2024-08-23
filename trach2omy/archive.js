@@ -15,7 +15,7 @@ const loadArchive = async () => {
 	const chapterList = comicObject.chapters
 	
 	//variables i'm not defining yet
-	let chapterDateStart,chapterDateEnd = " "
+	let chapterDateStart,chapterDateEnd = " " //TODO, GET DATES SOMEHOW
 
 	//add chapters to webpage 
 	//==========================================================================================================
@@ -41,7 +41,7 @@ const loadArchive = async () => {
 		let pageTitle = page.title ? page.title : i ? `Page ${i}` : "Update" //flare wrote this line and it is dark javascript magic as far is i'm concerned - june
 		let pageLink = `../?pg=${i}`
 		
-		let pageChapter = chapterList.findLastIndex(x => x.firstPage <= i); //...almost works, but not quite
+		let pageChapter = chapterList.findLastIndex(x => x.firstPage <= i);
 		console.log(pageChapter)
 		
 		document.querySelector(`#list${pageChapter}`).insertAdjacentHTML("afterbegin", `<li><b>${pageDate}</b> - <a href="${pageLink}">${pageTitle}</a></li>`)
