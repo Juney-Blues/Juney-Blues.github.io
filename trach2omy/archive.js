@@ -10,12 +10,12 @@ const initArchive = json => {
 
 const loadArchive = async () => {
 	//constants, sorted by date
-	const pageList    = comicObject.pages.sort((a,b) => a.date > b.date)
-	const archiveList = comicObject.archive.sort((a,b) => a.date > b.date)
+	const pageList    = comicObject.pages   //.sort((a,b) => a.date > b.date)
+	const archiveList = comicObject.archive //.sort((a,b) => a.date > b.date)
 	const chapterList = comicObject.chapters
 	
 	//variables i'm not defining yet
-	let archiveString,chapterDateStart,chapterDateEnd = " "
+	let chapterDateStart,chapterDateEnd = " "
 
 	//add chapters to webpage 
 	//==========================================================================================================
@@ -41,7 +41,7 @@ const loadArchive = async () => {
 		let pageTitle = page.title ? page.title : i ? `Page ${i}` : "Update" //flare wrote this line and it is dark javascript magic as far is i'm concerned - june
 		let pageLink = `../?pg=${i}`
 		
-		let pageChapter = chapterList.findIndex(x => x.firstPage <= i); //...almost works, but not quite
+		let pageChapter = chapterList.findLastIndex(x => x.firstPage <= i); //...almost works, but not quite
 		console.log(pageChapter)
 		
 		document.querySelector(`#list${pageChapter}`).insertAdjacentHTML("afterbegin", `<li><b>${pageDate}</b> - <a href="${pageLink}">${pageTitle}</a></li>`)
