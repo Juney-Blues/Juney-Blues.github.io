@@ -1,7 +1,47 @@
 {
   "linkPrefix": "https://file.garden/Y5hdfT_qkQx7G08g/Tracheotomy/",
+  "archive": [
+	{
+		"title": "Choose Your Own Tracheotomy!",
+		"url":"/tracheotomy/tests/",
+		"date":"2023-07-11T13:27:33Z"
+	},
+	{
+		"title": "Archive Added!",
+		"url":"/tracheotomy/archive/",
+		"date":"2022-10-13"
+	},
+	{
+		"title": "Mirrored on Neocities!",
+		"url":"/tracheotomyOld/",
+		"date":"2022-12-03T13:00:00Z"
+	},
+	{
+		"title": "Javascript Overhaul!",
+		"url":"/tracheotomy/",
+		"date":"2022-12-18"
+	},
+	{
+		"title": "Page 45 Ambience Overhaul by Dare0451!",
+		"url":"../credits",
+		"date":"2024-01-24T13:24:33Z"
+	}
+  ],
+  "chapters": [
+	{
+		"title1": "TRACHEOTOMY.1",
+		"title2": "Watch As I Perform My Own Tracheotomy (working title)",
+		"firstPage": 0
+	},
+	{
+		"title1": "TRACHEOTOMY.2",
+		"title2": "TestChapter",
+		"firstPage": 9
+	}
+  ],
   "pages": [
     {
+	  "title": "Title Page Added!",
       "img": "Ch1/watchasiperformmyowntracheotomy.png",
       "date": "2022-10-26" 
     },

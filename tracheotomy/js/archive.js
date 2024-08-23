@@ -29,7 +29,7 @@ for (let i = 0; i < chapterList.length; i++) {
 //if you are looking through this for code reference, please for the love of good look elsewhere i have no clue what i'm doing <3
 for (let i = 0; i < chapterList.length; i++) {
 		let archiveString = ""
-	chapters[i].forEach(item => {
+		chapters[i].forEach(item => {
 		let date = item.date.toLocaleDateString()
 		let link = item.url ? item.url : item.pgNum ? "../?pg=" + item.pgNum : ""
 		let title = item.title ? item.title : item.pgNum ? "Page " + item.pgNum : "Update"

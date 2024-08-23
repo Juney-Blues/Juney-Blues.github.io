@@ -24,7 +24,7 @@ const getUrlPage = () => {
 
 const loadPage = async () => {
   const pageIndex = parseInt(getUrlPage())
-  console.log(pageIndex)
+  //console.log(pageIndex)
   const page = comicObject.pages[pageIndex]
   const comicLength = comicObject.pages.length
 

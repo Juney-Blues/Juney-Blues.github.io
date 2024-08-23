@@ -762,6 +762,5 @@ const chapterList = [
 		"title1": "TRACHEOTOMY.1",
 		"title2": "Watch As I Perform My Own Tracheotomy (working title)",
 		"firstPage": 1,
-	},
-
+	}
 ]

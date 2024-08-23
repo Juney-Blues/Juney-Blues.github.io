@@ -5,7 +5,7 @@ var comicTabs = [
 		<p>originally hosted on <a href="https://juney-blues.tumblr.com/tracheotomy">TUMBLR</a></p>
 		<p>A girl dissociates in her apartment and has a generally normal time</p>
 		<p><b id="tracheotomyLength"></b> pages and counting!</p>
-		<p><a href="tracheotomy">READ IT HERE.</a>`,
+		<p><a href="trach2omy">READ IT HERE.</a>`,
 	},
 	{
 		"title": "Placeholder!",
