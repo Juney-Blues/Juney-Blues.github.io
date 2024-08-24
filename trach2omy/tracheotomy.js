@@ -64,6 +64,14 @@ const loadPage = async () => {
   if (pageIndex > 1) { 
     document.getElementById("preloadPrev").src = comicObject.linkPrefix + comicObject.pages[pageIndex - 1].img 
   }
+  
+  // Load additional credits
+  if (page.credit != null) {
+	document.getElementById("pageCredits").innerHTML = page.credit
+  }
+  else{
+	document.getElementById("pageCredits").innerHTML = ""
+  }
 
   // Scroll to top
   window.scrollTo(0, 0);
