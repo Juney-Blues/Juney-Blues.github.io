@@ -23,6 +23,10 @@ body {
   position: relative
 }
 
+#main {
+  min-height: 70vh;
+}
+
 /* HEADER */
 header {
   background-color: var(--header-bg-color);
@@ -81,17 +85,15 @@ header {
   z-index: -10;
 }
 /* Archive Stuff */
-
-details[open] > .archive-header:after {
-	 content: "\25BC";
-	 
+#archiveContainer {
+  padding-bottom: 140px;
 }
 
 .archive-header {
-	line-height: 16px;
-	padding:8px 8px 0px 8px;
-	cursor:pointer;
-	list-style: none;
+  line-height: 16px;
+  padding:8px 8px 0px 8px;
+  cursor:pointer;
+  list-style: none;
 }
 
 .archive-header:after {
@@ -102,7 +104,11 @@ details[open] > .archive-header:after {
   margin-left: 5px;
 }
 
-.archivecontainer {
+details[open] > .archive-header:after {
+  content: "\25BC"; 
+}
+
+.archive-chapter {
   position: relative;
   background-color: var(--header-bg-color, #212121);
   margin-left: auto;
