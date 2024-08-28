@@ -84,7 +84,9 @@ header {
   height: 360px;
   z-index: -10;
 }
+
 /* Archive Stuff */
+
 #archiveContainer {
   padding-bottom: 140px;
 }
@@ -104,20 +106,27 @@ header {
   margin-left: 5px;
 }
 
+details {
+  background-color:    var(--header-bg-color, #212121);
+  border-width:        1px;
+  border-style:        solid;
+  border-color:        var(--header-bg-color, #212121);
+  list-style-position: inside;
+}
+
 details[open] > .archive-header:after {
   content: "\25BC"; 
 }
 
 .archive-chapter {
-  position: relative;
-  background-color: var(--header-bg-color, #212121);
-  margin-left: auto;
-  margin-right:auto;
-  margin-top: 20px;
-  margin-bottom:20px;
-  padding-top: 2px;
-  width: 85%;
-  max-width: 900px;
+  position:      relative;
+  margin-left:   auto;
+  margin-right:  auto;
+  margin-top:    20px;
+  margin-bottom: 20px;
+  padding-top:   2px;
+  width:         85%;
+  max-width:     900px;
 }
 
 li {
@@ -135,15 +144,43 @@ li:nth-of-type(odd) {
 }
 
 ul {
-	margin-top: 8px;
-	margin-left: 0;
-	margin-right:0;
-	width:100%;
-	padding: 0;
-	background-color: var(--page-container-bg-color, #B8B8B8);
-	list-style-position: inside;
+	margin:              8px 0 0 0;
+	width:               100%;
+	padding:             0;
+	background-color:    var(--page-container-bg-color, #B8B8B8);
 }
 
+/* Credits Stuff */
+
+.creditsContainer {
+  clear:               both;
+  padding:             8px;
+  display:             flex;
+  justify-content:     space-between;
+  background-color:    var(--comic-background-bg-color);
+  border-style:        solid;
+  border-width:        1px;
+  border-color:        var(--header-bg-color, #212121);
+}
+
+.credit {
+ margin-top: auto;
+ margin-bottom: auto;
+}
+
+.credit::before {
+  content: "-";
+}
+
+.contributions {
+  width: 30%;
+}
+
+.contributions > summary::before{
+  content: "Contributions"; 
+}
+
+.
 /* ====== */
 /* THEMES */
 /* ====== */
@@ -162,6 +199,10 @@ ul {
   --themeTransition: background-color 4s 2s;
 }
 
+.flashwhite {
+	animation: BGfadein;
+	animation-duration:5s;
+}
 /* LOGS */
 
 .dissonancelog {
@@ -180,6 +221,30 @@ ul {
 }
 
 /* MISC */
+
+.textBox{
+  background-color: var(--page-container-bg-color);
+  padding: 8px;
+  border-width: 2px;
+  max-width: 55%;
+  display: block;
+  margin: 20px auto;
+}
+
+.headerText{
+  font-size:		 20px;
+  font-weight:       bold;
+  background-color:  var(--header-bg-color, #212121);
+  margin-top:        -8px;
+  margin-left:		 -8px;
+  margin-right: 	 -8px;
+  padding: 			 10px;
+}
+
+.subheader {
+  font-size:   18px;
+  font-weight: bold;
+}
 
 .floatingImage {
   position: absolute;
@@ -202,6 +267,17 @@ ul {
 	to { 
 		opacity: 0;
 		background-color: transparent;
+	} 
+}
+
+@keyframes BGfadein { 
+	from { 
+
+		background-color: white;
+	} 
+	to { 
+
+		background-color: #8D8D8D;
 	} 
 }
 

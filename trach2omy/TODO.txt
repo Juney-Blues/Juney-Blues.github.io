@@ -1,0 +1,4 @@
+- get audio code working
+- page 34 (add open dissonance log button)
+- figure out godot embeds
+- redo credits page
