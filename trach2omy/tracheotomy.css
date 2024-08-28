@@ -179,7 +179,6 @@ ul {
 .contributions > summary::before{
   content: "Contributions"; 
 }
-
 .
 /* ====== */
 /* THEMES */
@@ -295,4 +294,13 @@ ul {
   to {
     visibility: visible;
   }
+}
+/* Responsive Web Page Stuff? */
+@media only screen and (max-width: 750px) {
+	.textBox {
+		max-width:100%;
+	}
+	.contributions > summary::before{
+	  content: ""; 
+	}
 }

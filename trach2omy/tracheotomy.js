@@ -75,6 +75,9 @@ const loadPage = async () => {
 
   // Scroll to top
   window.scrollTo(0, 0);
+  
+  //load audio
+  setPageSound(page);
 }
 
 // Init custom page events

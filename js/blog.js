@@ -24,7 +24,7 @@ const getUrlPage = () => {
     let date = item.date.toLocaleDateString();
 	let blogNum = blogList.indexOf(item);
     let title = item.title;	
-    document.getElementById("blog-archive").insertAdjacentHTML("afterbegin",`<li><a class="pageLink" href="?p=${blogNum}">${title}</a><br>${date}</li>`);
+    document.getElementById("blog-archive-list").insertAdjacentHTML("afterbegin",`<li><a class="pageLink" href="?p=${blogNum}">${title}</a><br> ${date}</li>`);
 	})
 
   
@@ -33,6 +33,10 @@ const clickLink = (event, link) => {
   event.preventDefault()
   history.pushState(null, '', link)
   loadBlog()
+}
+
+window.onpopstate = (event) => {
+	loadBlog();
 }
 
 document.querySelectorAll(".pageLink").forEach(a => { a.addEventListener("click", evt => clickLink(evt, a.href)) })
