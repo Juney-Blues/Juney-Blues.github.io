@@ -2,34 +2,46 @@
 <img src="MAINIMAGE">
 
 <!-- ADDITIONAL HTML -->
-<!-- <button 
-  onclick="page34AnimateBubble()" 
+<!-- the onclick stuff is hacky. i don't care <3. this is an old page and it was already janky and badly programmed. this is somehow a marked improvement, i just wanna get it working again so i can move on lmao-->
+<button 
+  onclick="
+  document.querySelector('.dissonancebutton').style.display = 'none';
+  document.querySelector('.bubble').style.transform = '';
+  document.querySelector('.dissonancelog').style.opacity = 1;
+  document.querySelector('.dissonancelog').classList.add('appear');
+  " 
   id="dissonancebutton" 
   class="dissonancebutton" 
   style="position:absolute; top:360px; left:50%; transform:translateX(-50%); z-index:6;">
   Open Dissonance-log
-</button> -->
+</button>
 
 <img 
   class="floatingImage bubble" 
   src="https://file.garden/Y5hdfT_qkQx7G08g/Tracheotomy/Ch2/Ch2Pg34Bubble.png" 
   style="
-    inset: 85px auto auto 290px;
-    transform: translateY(64px)"
+    inset: 148px auto auto 290px;
+    transform: translateY(64px) scale(1, 0.5);
+	transition: transform 1s cubic-bezier(.17,.84,.44,1);
+	"
 >
 
 <div 
   class="dissonancelog"
-  style="height: 220px; width: 180px; top:200px; left:360px;">
+  style="
+  height: 220px; width: 180px; top:200px; left:360px;
+  opacity: 0;
+  transition: opacity 1.1s steps(1);
+  ">
 
-  <p data-user="yellow"> HIIII :D </p>
-  <p data-user="yellow"> you didn't tell me your birthday was yesterday >:0 </p>
+  <p data-user="yellow" style="animation-duration: 2s;" > HIIII :D </p>
+  <p data-user="yellow" style="animation-duration: 4s"> you didn't tell me your birthday was yesterday >:0 </p>
 
-  <p data-user="teal"> hiyaaaa </p>
-  <p data-user="teal"> sorryyyy,</p>
-  <p data-user="teal"> kinda spent most of it dissociating lolol </p>
+  <p data-user="teal"   style="animation-duration: 6s;" > hiyaaaa </p>
+  <p data-user="teal"   style="animation-duration: 8s;" > sorryyyy,</p>
+  <p data-user="teal"   style="animation-duration: 10s;"> kinda spent most of it dissociating lolol </p>
 
-  <p data-user="yellow"> no excuse!!!! <br>૮ ò ｪóა </p>
+  <p data-user="yellow" style="animation-duration: 12s;"> no excuse!!!! <br>૮ ò ｪóა </p>
 
 </div>
 
@@ -45,5 +57,20 @@
     100% {
       transform: translateY(0) scale(1,1);
     }
+  }
+  @keyframes messageAppear {
+	0% {
+      opacity: 0;
+	}
+	98% {
+      opacity: 0;
+	}
+	100% {
+      opacity: 1;
+	}
+  }
+  .appear > p {
+	animation-name: messageAppear;
+	animation-timing-function: steps(1);
   }
 </style>

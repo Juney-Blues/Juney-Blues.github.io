@@ -221,6 +221,11 @@ ul {
 
 /* MISC */
 
+button{
+  font-family: Courier;
+  text-align: Center;
+}
+
 .textBox{
   background-color: var(--page-container-bg-color);
   padding: 8px;

@@ -1,4 +1,4 @@
-- get audio code working
-- page 34 (add open dissonance log button)
+- get audio code working [~]
+- page 34 (add open dissonance log button) ☑ (janky but it works)
 - figure out godot embeds
-- redo credits page
+- redo credits page ☑
