@@ -46,6 +46,7 @@ header {
   transition: var(--themeTransition);
   
   width: fit-content;
+  min-width: 740px;
   min-height: 878px;
 
   padding: 50px 50px 36px;
