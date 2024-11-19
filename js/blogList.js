@@ -9,4 +9,9 @@ var blogList = [
 		"url": "/blog/posts/2.html",
 		"date": new Date("2024-08-18T01:56:00Z")
 	},
+	{
+		"title": "blog intro",
+		"url": "/blog/posts/2024-19-11-blog intro.html",
+		"date": new Date("2024-11-19T22:19:00Z")
+	},
 ]

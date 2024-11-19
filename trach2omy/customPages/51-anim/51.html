@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html xmlns='http://www.w3.org/1999/xhtml' lang='' xml:lang=''>
 <head>
-	<meta charset='utf-8' />
-	<meta name='viewport' content='width=device-width, user-scalable=no' />
-	<title>Anim1-Waipmot-Attempt2</title>
+	  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRACHEOTOMY!!</title>
+  <link rel="shortcut icon" type="image/png" href="./favicon.png">
+  <link rel="stylesheet" href="/trach2omy/tracheotomy.css">
+  <base href="http://localhost:8000/trach2omy/custompages/51-anim/" target ="_top">
 <style>
-body {
-	touch-action: none;
-	margin: 0;
-	border: 0 none;
-	padding: 0;
-	text-align: center;
-	background-color: black;
-}
-
 #canvas {
 	display: block;
-	margin: 0;
+	margin: 50px;
 	color: white;
 }
 
@@ -37,6 +31,7 @@ body {
 
 #status {
 	position: absolute;
+	margin: 50px;
 	left: 80px;
 	top: 528px;
 	/*right: 0;*/
@@ -110,30 +105,67 @@ body {
 	padding: 4px 6px;
 	visibility: visible;
 }
-		</style>
+</style>
 
 </head>
-<body>
-	<img src="./Preloader.png" style="position: absolute; left:0; top:0; z-index:-1;">
-	<canvas id='canvas'>
-		HTML5 canvas appears to be unsupported in the current browser.<br />
-		Please try updating or use a different browser.
-	</canvas>
-	<div id='status'>
-		<div id='status-progress' style='display: none;' oncontextmenu='event.preventDefault();'><div id ='status-progress-inner'></div></div>
-		<div id='status-indeterminate' style='display: none;' oncontextmenu='event.preventDefault();'>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
-		<div id='status-notice' class='godot' style='display: none;'></div>
-	</div>
+<body class ="city">
+  <header>
+    <div id="pageTitle">Watch As I Perform My Own Tracheotomy.</div>
+  </header>
 
+  <!-- Main -->
+  <div id="main">
+    <div id="pageContainer">
+
+      <div id="pageContent">
+		<img src="./Preloader.png" style="z-index:-1;">
+		<canvas id='canvas' style="position: absolute; left:0; top:0; z-index:20;">
+			HTML5 canvas appears to be unsupported in the current browser.<br />
+			Please try updating or use a different browser.
+		</canvas>
+		<div id='status'>
+			<div id='status-progress' style='display: none;' oncontextmenu='event.preventDefault();'><div id ='status-progress-inner'></div></div>
+			<div id='status-indeterminate' style='display: none;' oncontextmenu='event.preventDefault();'>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div id='status-notice' class='godot' style='display: none;'></div>
+		</div>
+
+      </div>
+
+      <div id="pageNavigation">
+        <div id="adjacentPages">
+          <a id="prevPage" class="pageLink" href="/trach2omy/?pg=50" target = "_top">&lt;--</a>
+          <!--<a id="nextPage" class="pageLink" href="/?pg=52" target = "_top">--&gt;</a>-->
+        </div>
+
+        <a id="startOver" class="pageLink" href="/trach2omy?/pg=0">Start Over.</a>
+      </div>
+    </div>
+  </div>
+  
+  <div id="footerCredits">
+	<p style="text-align: center"><a href="/trach2omy/archive/" target = "_top">Archive Log.</a></p>
+	<div id="pageCredits"></div>
+	<p>Music by <a href='https://talkshowboy.bandcamp.com/'>Talkshow Boy</a> - <i>(used under a <a href='https://creativecommons.org/licenses/by-sa/3.0/'>Creative Commons license</a>)</i></p>
+	<p>Story and art by <a href="https://junebugjamboree.neocities.org" target = "_top">Juney-Blues</a></p>
+	<p>Original Site by <a href="https://rnoonsetter.tumblr.com/" target = "_top">April H.</a></p>
+	<p>Coding Help from <a href="https://flaringk.github.io/Portfolio/" target = "_top">FlaringK</a></p>
+	<p style="text-align: center"><a href="/trach2omy/credits/" target = "_top">Full Credits.</a></p>
+  </div>
+	
+  <div id="fakeFooterBackground"></div>
+
+  <!-- Hidden -->
+  <div id="hidden" style="display: none;">
+  
 	<script type='text/javascript' src='51.js'></script>
 	<script type='text/javascript'>//<![CDATA[
 
@@ -241,6 +273,9 @@ body {
 			}
 		})();
 	//]]></script>
+
+  </div>
+
 </body>
 </html>
 
