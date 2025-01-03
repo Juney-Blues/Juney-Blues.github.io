@@ -569,4 +569,28 @@ var artList = [
 		"date": new Date("2024-11-13T01:00:00Z"),
 		"pixellated": "true",
 	},
+	{
+		"title": "Feral Maid",
+		"description": `<i>"i saw a feral maid today. it was rummaging through trash in an alleyway when it turned to looked at me. its teeth were pointed shards of porcelain. its bloodstained joints made an awful scraping noise when it moved. If I didn't know better, I'd think she was in pain."</i><br><a href="https://www.tumblr.com/maidthings/745801494420389888/">maidthings on tumblr</a>`, 
+		"imgUrl": "https://file.garden/Y5hdfT_qkQx7G08g/Art/MaidStuff/feralmaid.png",
+		"category": "maids",
+		"date": new Date("2024-12-21T12:00:00Z"),
+		"pixellated": "true",
+	},
+	{
+		"title": "Cottagecore",
+		"description": `another <a href="https://www.tumblr.com/maidthings/767596785197891584/">maidthings post!</a>`, 
+		"imgUrl": "https://file.garden/Y5hdfT_qkQx7G08g/Art/MaidStuff/maidcottagecore.png",
+		"category": "maids",
+		"date": new Date("2024-12-27T13:00:00Z"),
+		"pixellated": "true",
+	},
+	{
+		"title": "Maidimation",
+		"description": `some animation practice with this maid girl :3`, 
+		"imgUrl": "https://file.garden/Y5hdfT_qkQx7G08g/Art/MaidStuff/maidimation.gif",
+		"category": "maids",
+		"date": new Date("2025-01-02T13:00:00Z"),
+		"pixellated": "true",
+	},
 ]
