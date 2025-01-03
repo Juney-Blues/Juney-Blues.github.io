@@ -593,4 +593,12 @@ var artList = [
 		"date": new Date("2025-01-02T13:00:00Z"),
 		"pixellated": "true",
 	},
+	{
+		"title": "Do Not. Sweep The Dishes.",
+		"description": `worst mistake of my life.<br>...hey doesn't she look kinda familiar?`, 
+		"imgUrl": "https://file.garden/Y5hdfT_qkQx7G08g/Art/MaidStuff/sweepthedishes.png",
+		"category": "maids",
+		"date": new Date("2025-01-03T14:00:00Z"),
+		"pixellated": "true",
+	},
 ]
