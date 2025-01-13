@@ -601,4 +601,12 @@ var artList = [
 		"date": new Date("2025-01-03T14:00:00Z"),
 		"pixellated": "true",
 	},
+	{
+		"title": "Red petals lie scattered on the ground...",
+		"description": `Cave Story is a game that's incredibly good at setting mood. This is a small moment that stuck with me...<br>Hope those 5 extra missiles were worth it, killing machine~`, 
+		"imgUrl": "https://file.garden/Y5hdfT_qkQx7G08g/Art/MiscStuff/2025-01-13-red-petals.png",
+		"category": "fanart",
+		"date": new Date("2025-01-13T15:30:00Z"),
+		"pixellated": "true",
+	},
 ]
