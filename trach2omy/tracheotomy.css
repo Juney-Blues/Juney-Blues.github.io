@@ -20,7 +20,8 @@ body {
   -webkit-font-smoothing : none;
   -moz-osx-font-smoothing: never;
 
-  position: relative
+  position: relative;
+  min-width: min-content;
 }
 
 #main {
