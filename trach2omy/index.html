@@ -1,64 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TRACHEOTOMY!!</title>
-  <link rel="shortcut icon" type="image/png" href="./favicon.png">
-  <link rel="stylesheet" href="./tracheotomy.css">
-</head>
-<body>
-  
-  <!-- Header -->
-  <header>
-    <div id="pageTitle">Watch As I Perform My Own Tracheotomy.</div>
-  </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRACHEOTOMY!!</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon.png">
+    <link rel="stylesheet" href="./tracheotomy.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div id="pageTitle">Watch As I Perform My Own Tracheotomy.</div>
+    </header>
 
-  <!-- Main -->
-  <div id="main">
-    <div id="pageContainer">
-
-      <div id="pageContent">
-      </div>
-
-      <div id="pageNavigation">
-        <div id="adjacentPages">
-          <a id="prevPage" class="pageLink">&lt;--</a>
-          <a id="nextPage" class="pageLink">--&gt;</a>
+    <!-- Main -->
+    <div id="main">
+      <div id="pageContainer">
+        <div id="pageContent"></div>
+        <div id="pageNavigation">
+          <div id="adjacentPages">
+            <a id="prevPage" class="pageLink">&lt;--</a>
+            <a id="nextPage" class="pageLink">--&gt;</a>
+          </div>
+          <a id="startOver" class="pageLink" href="/trach2omy?/pg=0">Start Over.</a>
         </div>
-
-        <a id="startOver" class="pageLink" href="/trach2omy?/pg=0">Start Over.</a>
       </div>
     </div>
-  </div>
-  
-  <div id="footerCredits">
-	<p style="text-align: center"><a href="archive/">Archive Log.</a></p>
-	<div id="pageCredits"></div>
-	<p>Story and art by <a href="https://junebugjamboree.neocities.org">Juney-Blues</a></p>
-	<p>Original Site by <a href="https://rnoonsetter.tumblr.com/">April H.</a></p>
-	<p>Coding Help from <a href="https://flaringk.github.io/Portfolio/">FlaringK</a></p>
-	<p style="text-align: center"><a href="./credits/">Full Credits.</a></p>
-  </div>
-	
-  <div id="fakeFooterBackground"></div>
 
-  <!-- Hidden -->
-  <div id="hidden" style="display: none;">
-
-    <audio id="backgroundMusic1" autoplay loop></audio>
-    <audio id="backgroundMusic2" autoplay loop></audio>
-
-    <audio id="backgroundAmbience1" autoplay loop></audio>
-    <audio id="backgroundAmbience2" autoplay loop></audio>
-
-    <img src="" alt="" id="preloadNext">
-    <img src="" alt="" id="preloadPrev">
-
-    <script src="./tracheotomy.js"></script>
-	<script src="./audio.js"></script>
-
-  </div>
-
-</body>
+    <!-- Footer -->
+    <div id="footerCredits">
+      <p style="text-align: center">
+        <a href="archive/">Archive Log.</a>
+      </p>
+      <div id="pageCredits"></div>
+      <p>Story and art by <a href="https://junebugjamboree.neocities.org">Juney-Blues</a>
+      </p>
+      <p>Original Site by <a href="https://rnoonsetter.tumblr.com/">April H.</a>
+      </p>
+      <p>Coding Help from <a href="https://flaringk.github.io/Portfolio/">FlaringK</a>
+      </p>
+      <p style="text-align: center">
+        <a href="./credits/">Full Credits.</a>
+      </p>
+    </div>
+    <div id="fakeFooterBackground"></div>
+    
+    <!-- Hidden -->
+    <div id="hidden" style="display: none;">
+      <audio id="backgroundMusic1" autoplay loop></audio>
+      <audio id="backgroundMusic2" autoplay loop></audio>
+      <audio id="backgroundAmbience1" autoplay loop></audio>
+      <audio id="backgroundAmbience2" autoplay loop></audio>
+      <img src="" alt="" id="preloadNext">
+      <img src="" alt="" id="preloadPrev">
+      <script src="./tracheotomy.js"></script>
+      <script src="./audio.js"></script>
+    </div>
+  </body>
 </html>

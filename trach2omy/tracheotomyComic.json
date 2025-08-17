@@ -1,92 +1,95 @@
 {
   "linkPrefix": "https://file.garden/Y5hdfT_qkQx7G08g/Tracheotomy/",
+  
   "archive": [
-	{
-		"title": "Choose Your Own Tracheotomy!",
-		"url":"/tracheotomy/tests/",
-		"date":"2023-07-11T13:27:33Z"
-	},
-	{
-		"title": "Archive Added!",
-		"url":"/tracheotomy/archive/",
-		"date":"2022-10-13"
-	},
-	{
-		"title": "Mirrored on Neocities!",
-		"url":"/tracheotomyOld/",
-		"date":"2022-12-03T13:00:00Z"
-	},
-	{
-		"title": "Javascript Overhaul!",
-		"url":"/tracheotomy/",
-		"date":"2022-12-18"
-	}
+    {
+      "title": "Choose Your Own Tracheotomy!",
+      "url": "/tracheotomy/tests/",
+      "date": "2023-07-11T13:27:33Z"
+    },
+    {
+      "title": "Archive Added!",
+      "url": "/tracheotomy/archive/",
+      "date": "2022-10-13"
+    },
+    {
+      "title": "Mirrored on Neocities!",
+      "url": "/tracheotomyOld/",
+      "date": "2022-12-03T13:00:00Z"
+    },
+    {
+      "title": "Javascript Overhaul!",
+      "url": "/tracheotomy/",
+      "date": "2022-12-18"
+    }
   ],
+
   "chapters": [
-	{
-		"title1": "TRACHEOTOMY.1",
-		"title2": "Watch As I Perform My Own Tracheotomy (working title)",
-		"firstPage": 0
-	},
-	{
-		"title1": "TRACHEOTOMY.2",
-		"title2": "TestChapter",
-		"firstPage": 9
-	}
+    {
+      "title1": "TRACHEOTOMY.1",
+      "title2": "Watch As I Perform My Own Tracheotomy (working title)",
+      "firstPage": 0
+    },
+    {
+      "title1": "TRACHEOTOMY.2",
+      "title2": "TestChapter",
+      "firstPage": 9
+    }
   ],
+
   "pages": [
     {
-	  "title": "Title Page Added!",
+      "title": "Title Page Added!",
       "img": "Ch1/watchasiperformmyowntracheotomy.png",
-      "date": "2022-10-26" 
+      "date": "2022-10-26"
     },
     {
       "img": "Ch1/Ch1Pg1.gif",
-      "date": "2022-10-08T01:00:00Z" 
+      "date": "2022-10-08T01:00:00Z"
     },
     {
       "img": "Ch1/Ch1Pg2.png",
-      "date": "2022-10-08T02:00:00Z" 
+      "date": "2022-10-08T02:00:00Z"
     },
     {
       "img": "Ch1/Ch1Pg3.png",
-      "date": "2022-10-08T03:00:00Z" 
+      "date": "2022-10-08T03:00:00Z"
     },
     {
       "img": "Ch1/Ch1Pg4.png",
-      "date": "2022-10-09T01:00:00Z" 
+      "date": "2022-10-09T01:00:00Z"
     },
     {
       "img": "Ch1/Ch1Pg5.png",
-      "date": "2022-10-09T02:00:00Z" 
+      "date": "2022-10-09T02:00:00Z"
     },
     {
       "img": "Ch1/Ch1Pg6.png",
-      "date": "2022-10-09T03:00:00Z" 
+      "date": "2022-10-09T03:00:00Z"
     },
     {
       "img": "Ch1/Ch1Pg7.png",
-      "date": "2022-10-11T01:00:00Z" 
+      "date": "2022-10-11T01:00:00Z"
     },
     {
       "img": "Ch1/Ch1Pg8.png",
-      "date": "2022-10-13T13:00:00Z" 
+      "date": "2022-10-13T13:00:00Z"
     },
     {
       "img": "Ch1/Ch1Pg9.png",
-      "date": "2022-10-13T14:00:00Z" 
+      "date": "2022-10-13T14:00:00Z"
     },
     {
       "img": "Ch1pt2/Ch1Pg10.png",
-      "date": "2022-11-08T01:00:00Z" 
+      "date": "2022-11-08T01:00:00Z"
     },
     {
       "img": "Ch1pt2/Ch1Pg11.png",
-      "date": "2022-11-08T02:00:00Z" 
+      "date": "2022-11-08T02:00:00Z"
     },
     {
       "img": "Ch1pt2/Ch1Pg12.png",
-      "date": "2022-11-09T01:00:00Z" 
+      "date": "2022-11-09T01:00:00Z"
     },
     {
       "img": "Ch1pt2/Ch1Pg13.png",
@@ -112,47 +115,47 @@
     {
       "img": "Ch1pt2/Ch1Pg17.png",
       "date": "2022-12-03T01:00:00Z",
-      "theme":"dark"
+      "theme": "dark"
     },
     {
       "img": "Ch1pt2/Ch1Pg18.png",
       "date": "2022-12-23T22:41:50Z",
-      "theme":"dark"
+      "theme": "dark"
     },
     {
       "img": "Ch1pt2/Ch1Pg19.png",
       "date": "2022-12-23T22:42:41Z",
-      "theme":"dark"
+      "theme": "dark"
     },
     {
       "img": "Ch1pt2/Ch1Pg20.png",
       "date": "2022-12-23T22:43:00Z",
-      "theme":"dark"
+      "theme": "dark"
     },
     {
       "img": "Ch1pt2/ch1Pg21.png",
       "date": "2022-12-23T22:43:47Z",
-      "theme":"dark"
+      "theme": "dark"
     },
     {
       "img": "Ch1pt2/Ch1Pg22.png",
       "date": "2022-12-27T21:53:23Z",
-      "theme":"dark"
+      "theme": "dark"
     },
     {
       "img": "Ch1pt2/ch1Pg23.png",
       "date": "2022-12-27T21:53:57Z",
-      "theme":"dark"
+      "theme": "dark"
     },
     {
       "img": "Ch1pt2/Ch1Pg24.png",
       "date": "2022-12-30T23:23:52Z",
-      "theme":"dark"
+      "theme": "dark"
     },
     {
       "img": "Ch1pt2/Ch1Pg25.png",
       "date": "2023-01-03T00:09:52Z",
-      "theme":"dark"
+      "theme": "dark"
     },
     {
       "img": "Ch1pt2/Ch1Pg26.png",
@@ -165,148 +168,147 @@
     {
       "img": "Ch1pt2/Ch1Pg28.png",
       "date": "2023-01-03T23:35:08Z",
-      "theme":"city flashwhite",
+      "theme": "city flashwhite",
       "custom": true
     },
     {
       "img": "Ch2/Ch2Pg29.png",
       "date": "2023-01-14T19:13:08Z",
-      "theme":"city"
+      "theme": "city"
     },
     {
       "img": "Ch2/Ch2Pg30.png",
       "date": "2023-01-26T19:00:40Z",
-      "theme":"city"
+      "theme": "city"
     },
     {
       "img": "Ch2/Ch2Pg31.png",
       "date": "2023-02-02T00:00:10Z",
-      "theme":"city"
+      "theme": "city"
     },
     {
       "img": "Ch2/Ch2Pg32.png",
       "date": "2023-02-02T00:00:22Z",
-      "theme":"city"
+      "theme": "city"
     },
     {
       "img": "Ch2/Ch2Pg33WhoopsForgotTheOverlay.png",
       "date": "2023-02-24T16:00:50Z",
-      "theme":"city"
-
+      "theme": "city"
     },
     {
       "img": "Ch2/Ch2Pg34.png",
       "date": "2023-04-16T18:00:50Z",
-      "theme":"city",
+      "theme": "city",
       "custom": true
     },
     {
       "img": "Ch2/Ch2Pg35.png",
       "date": "2023-07-25T19:37:00Z",
-      "theme":"city",
+      "theme": "city",
       "custom": true
     },
     {
       "img": "Ch2/Ch2Pg36.png",
       "date": "2023-07-25T19:37:01Z",
-      "theme":"city",
+      "theme": "city",
       "custom": true
     },
     {
       "img": "Ch2/Ch2Pg37.png",
       "date": "2023-07-25T19:37:02Z",
-      "theme":"city",
+      "theme": "city",
       "custom": true
     },
     {
       "img": "Ch2/Ch2Pg38.png",
       "date": "2023-07-25T19:37:03Z",
-      "theme":"city",
+      "theme": "city",
       "custom": true
     },
     {
       "img": "Ch2/Ch2Pg39.png",
       "date": "2023-07-25T19:37:04Z",
-      "theme":"city",
+      "theme": "city",
       "custom": true
     },
     {
       "img": "Ch2/Ch2Pg40.png",
       "date": "2023-08-02T23:55:04Z",
-      "theme":"city",
+      "theme": "city",
       "custom": true
     },
     {
       "img": "Ch2/Ch2Pg41.png",
       "date": "2023-09-10T04:14:04Z",
-      "theme":"city",
+      "theme": "city",
       "custom": true
     },
     {
       "img": "Ch2/Ch2Pg42.png",
       "date": "2023-11-14T23:46:53Z",
-      "theme":"city",
+      "theme": "city",
       "custom": true
     },
     {
       "img": "Ch2/Ch2Pg43.png",
       "date": "2023-11-14T23:47:15Z",
-      "theme":"city",
+      "theme": "city",
       "custom": true
     },
     {
       "img": "Ch2/CH2Pg44.png",
       "date": "2023-11-14T23:49:50Z",
-	  "theme":"city"
+      "theme": "city"
     },
     {
       "img": "Ch2/CH2Pg45.png",
       "date": "2023-11-14T23:49:57Z",
-      "theme":"city",
+      "theme": "city",
       "ambience": "Sound/Ambience/AmbienceAprilHouse-1.ogg",
-	  "credit": "<p>Ambient noise by <a href='https://youtube.com/@podfeels'>Dare0451</a></p>"
+      "credit": "<p>Ambient noise by <a href='https://youtube.com/@podfeels'>Dare0451</a></p>"
     },
     {
       "img": "Ch3/Ch3prelude1.png",
       "date": "2023-12-15T22:16:50Z",
-      "theme":"city",
+      "theme": "city",
       "ambience": "Sound/Ambience/AmbienceAprilHouse-1.ogg",
-	  "credit": "<p>Ambient noise by <a href='https://youtube.com/@podfeels'>Dare0451</a></p>"
+      "credit": "<p>Ambient noise by <a href='https://youtube.com/@podfeels'>Dare0451</a></p>"
     },
     {
       "img": "Ch3/Ch3prelude2.png",
       "date": "2024-01-19T11:57:50Z",
-      "theme":"",
+      "theme": "",
       "ambience": "Sound/Ambience/AmbienceAprilHouse-2.ogg",
-	  "credit": "<p>Ambient noise by <a href='https://youtube.com/@podfeels'>Dare0451</a></p>"
+      "credit": "<p>Ambient noise by <a href='https://youtube.com/@podfeels'>Dare0451</a></p>"
     },
     {
       "img": "Ch3/Ch3prelude3.png",
       "date": "2024-02-09T17:23:50Z",
-      "theme":"",
+      "theme": "",
       "ambience": "Sound/Ambience/AmbienceAprilHouse-2.ogg",
-	  "credit": "<p>Ambient noise by <a href='https://youtube.com/@podfeels'>Dare0451</a></p>"
+      "credit": "<p>Ambient noise by <a href='https://youtube.com/@podfeels'>Dare0451</a></p>"
     },
     {
       "img": "Ch3/Ch3prelude4.png",
       "date": "2024-02-19T04:23:56Z",
-      "theme":"",
+      "theme": "",
       "ambience": "Sound/Ambience/AmbienceAprilHouse-3.ogg",
-	  "credit": "<p>Ambient noise by <a href='https://youtube.com/@podfeels'>Dare0451</a></p>"
+      "credit": "<p>Ambient noise by <a href='https://youtube.com/@podfeels'>Dare0451</a></p>"
     },
     {
       "img": "Ch3/Ch3prelude5.png",
       "date": "2024-04-09T02:22:04Z",
-      "theme":"",
+      "theme": "",
       "ambience": "Sound/Ambience/AmbienceAprilHouse-4.ogg",
-	  "credit": "<p>Ambient noise by <a href='https://youtube.com/@podfeels'>Dare0451</a></p>"
+      "credit": "<p>Ambient noise by <a href='https://youtube.com/@podfeels'>Dare0451</a></p>"
     },
     {
       "img": "",
       "date": "2024-04-09T02:22:04Z",
-      "theme":"city",
-	  "custom": true,
-	  "credit": "<p>Music by <a href='https://talkshowboy.bandcamp.com/'>Talkshow Boy</a> - <i>(used under a <a href='https://creativecommons.org/licenses/by-sa/3.0/'>Creative Commons license</a>)</i></p>"
+      "theme": "city",
+      "custom": true,
+      "credit": "<p>Music by <a href='https://talkshowboy.bandcamp.com/'>Talkshow Boy</a> - <i>(used under a <a href='https://creativecommons.org/licenses/by-sa/3.0/'>Creative Commons license</a>)</i></p>"
     }
   ]
 }
