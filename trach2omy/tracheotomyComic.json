@@ -33,7 +33,7 @@
     {
       "title1": "-",
       "title2": "-",
-      "firstPage": 40
+      "firstPage": 50
     }
   ],
 
@@ -296,11 +296,6 @@
       "date": "2024-04-09T02:22:04Z",
       "theme": "",
       "ambience": "Sound/Ambience/AmbienceAprilHouse-4.ogg"
-    },
-	{
-      "img": "Ch3/Ch3prelude5.png",
-      "date": "2025-08-09T17:22:04Z",
-      "theme": ""
     }
   ]
 }

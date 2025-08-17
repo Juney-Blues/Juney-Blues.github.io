@@ -33,12 +33,12 @@ const loadArchive = async () => {
 			lastPage = nextChapter.firstPage - 1;
 		}
 		else{
-			lastPage = pageList.length -1;
+			lastPage = combinedList.length -1;
 		}
 		//=======================================
 		//get dates
-		let chapterDateStart = new Date(pageList[chapter.firstPage].date).toLocaleDateString()
-		let chapterDateEnd = new Date(pageList[lastPage].date).toLocaleDateString()
+		let chapterDateStart = new Date(combinedList[chapter.firstPage].date).toLocaleDateString()
+		let chapterDateEnd = new Date(combinedList[lastPage].date).toLocaleDateString()
 		
 		document.querySelector("#archiveContainer").insertAdjacentHTML("afterbegin",`
 		<details class="archive-chapter">
