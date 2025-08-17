@@ -246,6 +246,19 @@ ul {
   margin: 0 0 1px;
 	background-color: #DCDCDC;
 }
+/*username colors*/
+.teal {
+	color: #007880;
+}
+.pink {
+	color: #ff877f;
+}
+.yellow {
+	color: #cfa630;
+}
+.blue {
+	color: #3059cf;
+}
 
 /* MISC */
 
