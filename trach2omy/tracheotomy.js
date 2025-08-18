@@ -53,7 +53,12 @@ const loadPage = async () => {
 
 	// Set Theme
 	document.body.className = page.theme ?? ""
-
+	
+	// Set Header Title
+	if (page.header != null) {
+		document.getElementById("pageTitle").innerHTML = page.header
+	}
+	
 	// Set next and prev
 	const nextPage = document.getElementById("nextPage")
 	const prevPage = document.getElementById("prevPage")
