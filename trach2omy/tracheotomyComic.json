@@ -28,18 +28,18 @@
     {
       "title1": "Watch As I Perform My Own Tracheotomy (working title)",
       "title2": "A girl alone in her room...",
-      "firstPage": 0
+      "endPage": 45
     },
     {
       "title1": "-",
       "title2": "-",
-      "firstPage": 50
+      "endPage": 999
     }
   ],
 
   "pages": [
     {
-      "title": "Title Page Added!",
+      "title": "Cover",
       "img": "Ch1/watchasiperformmyowntracheotomy.png",
       "date": "2022-10-26"
     },

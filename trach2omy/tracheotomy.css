@@ -91,21 +91,32 @@ header {
 
 #archiveContainer {
   padding-bottom: 140px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: auto;
+}
+
+#archiveContainer > div {
+  width: 48%;
 }
 
 .archive-header {
   line-height: 16px;
-  padding:8px 8px 0px 8px;
-  cursor:pointer;
+  padding: 8px 8px 8px 8px;
+  cursor: pointer;
   list-style: none;
+  position: relative;
 }
 
 .archive-header:after {
   content: '\25BA'; 
   font-size: 13px;
   color: white;
-  float: right;
-  margin-left: 5px;
+
+  position: absolute;
+  bottom: 0;
+  right: 5px;
 }
 
 details {
@@ -127,13 +138,13 @@ details[open] > .archive-header:after {
   margin-top:    20px;
   margin-bottom: 20px;
   padding-top:   2px;
-  width:         85%;
-  max-width:     900px;
+}
+
+.archive-chapter.bonus {
 }
 
 li {
   list-style: none;
-  width: 100%;
   margin: 0;
   padding: 0;
   font-size: 1.2em;
@@ -146,8 +157,7 @@ li:nth-of-type(odd) {
 }
 
 ul {
-	margin:              8px 0 0 0;
-	width:               100%;
+	margin:              0 0 0 0;
 	padding:             0;
 	background-color:    var(--page-container-bg-color, #B8B8B8);
 }
