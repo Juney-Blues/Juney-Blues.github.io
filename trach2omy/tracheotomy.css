@@ -91,6 +91,7 @@ header {
 
 #archiveContainer {
   padding-bottom: 140px;
+
   display: flex;
   justify-content: space-between;
   max-width: 1300px;
@@ -99,6 +100,17 @@ header {
 
 #archiveContainer > div {
   width: 48%;
+}
+
+@media only screen and (max-width: 900px) {
+  #archiveContainer {
+    display: block;
+  }
+
+  #archiveContainer > div {
+    width: 90%;
+    margin: auto;
+  }
 }
 
 .archive-header {
