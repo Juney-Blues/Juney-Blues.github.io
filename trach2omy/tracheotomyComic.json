@@ -7,20 +7,20 @@
       "url": "/tracheotomy/tests/",
       "date": "2023-07-11T13:27:33Z"
     },
-    {
-      "title": "Archive Added!",
-      "url": "/tracheotomy/archive/",
-      "date": "2022-10-13"
+	{
+      "title": "Javascript Overhaul!",
+      "url": "/tracheotomy/",
+      "date": "2022-12-18"
     },
     {
       "title": "Mirrored on Neocities!",
       "url": "/tracheotomyOld/",
       "date": "2022-12-03T13:00:00Z"
     },
-    {
-      "title": "Javascript Overhaul!",
-      "url": "/tracheotomy/",
-      "date": "2022-12-18"
+	{
+      "title": "Archive Added!",
+      "url": "../archive/",
+      "date": "2022-10-13"
     }
   ],
 
