@@ -67,7 +67,7 @@ header {
   background-color: var(--comic-background-bg-color);
   transition: var(--themeTransition);
   
-  padding: 1em;
+  padding: 16px;
   margin: auto;
   max-width: 900px;
   box-sizing: border-box;

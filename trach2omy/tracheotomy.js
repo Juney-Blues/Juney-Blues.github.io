@@ -129,6 +129,30 @@ window.onpopstate = (event) => {
 }
 
 
+
 document.querySelectorAll(".pageLink").forEach(a => {
 	a.addEventListener("click", evt => clickLink(evt, a.href))
 })
+
+//handle key navigation
+window.addEventListener("keydown", function (event) {
+  if (event.defaultPrevented) {
+    return; // Do nothing if the event was already processed
+  }
+
+  switch (event.key) {
+    case "ArrowLeft":
+      if (document.getElementById("prevPage").style.display != "none") {
+		  document.getElementById("prevPage").dispatchEvent(new Event('click')); 
+	  }
+      break;
+    case "ArrowRight":
+      if (document.getElementById("nextPage").style.display != "none") {
+		  document.getElementById("nextPage").dispatchEvent(new Event('click')); 
+	  }
+      break;
+    default:
+      return; // Quit when this doesn't handle the key event.
+  }
+  event.preventDefault();
+}, true);
