@@ -14,6 +14,9 @@ const knownUsers = {
 	},
 }
 
+//global variables
+var isKeyNavAllowed = true;
+
 // LOAD COMIC OBJECT
 let comicObject
 let subPage = "/trach2omy"
@@ -83,7 +86,13 @@ const loadPage = async () => {
 	} else {
 		document.getElementById("pageCredits").innerHTML = ""
 	}
-
+	// Get whether key navigation is allowed
+	if (page.keynav == false) {
+		isKeyNavAllowed = false;
+	}
+	else {
+		isKeyNavAllowed = true;
+	}
 	// Scroll to top
 	window.scrollTo(0, 0);
 
@@ -142,12 +151,12 @@ window.addEventListener("keydown", function (event) {
 
   switch (event.key) {
     case "ArrowLeft":
-      if (document.getElementById("prevPage").style.display != "none") {
+      if (document.getElementById("prevPage").style.display != "none" && isKeyNavAllowed) {
 		  document.getElementById("prevPage").dispatchEvent(new Event('click')); 
 	  }
       break;
     case "ArrowRight":
-      if (document.getElementById("nextPage").style.display != "none") {
+      if (document.getElementById("nextPage").style.display != "none" && isKeyNavAllowed) {
 		  document.getElementById("nextPage").dispatchEvent(new Event('click')); 
 	  }
       break;
