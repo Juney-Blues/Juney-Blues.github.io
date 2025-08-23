@@ -60,7 +60,7 @@ const loadArchive = comicObject => {
 	document.getElementById("archiveLog").innerHTML = `
 	<details class="archive-chapter bonus" open>
 		<summary class="archive-header collapsible" id="archiveChapter">
-			<B>News, etc</B>
+			<B>News, etc.</B>
 			<br>Etcetera and etcetera and etcetera...<br>
 		</summary>
 		<ul id="archivePageList">${archiveLogHtml}</ul>

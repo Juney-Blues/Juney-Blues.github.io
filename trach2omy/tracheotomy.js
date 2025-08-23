@@ -16,7 +16,7 @@ const knownUsers = {
 
 //global variables
 var isKeyNavAllowed = true;
-
+let chapter;
 // LOAD COMIC OBJECT
 let comicObject
 let subPage = "/trach2omy"
@@ -38,7 +38,8 @@ const loadPage = async () => {
 	//console.log(pageIndex)
 	const page = comicObject.pages[pageIndex]
 	const comicLength = comicObject.pages.length
-
+	//get current chapter
+	chapter = comicObject.chapters.find((e) => e.endPage >= pageIndex);
 	// LOAD PAGE
 	if ("custom" in page) {
 		// Load custom page
@@ -58,8 +59,11 @@ const loadPage = async () => {
 	document.body.className = page.theme ?? ""
 	
 	// Set Header Title
+	if (chapter.defaultheader != null){
+		document.getElementById("pageTitle").innerHTML = chapter.defaultheader;
+	}
 	if (page.header != null) {
-		document.getElementById("pageTitle").innerHTML = page.header
+		document.getElementById("pageTitle").innerHTML = page.header;
 	}
 	
 	// Set next and prev

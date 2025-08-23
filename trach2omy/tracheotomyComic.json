@@ -28,11 +28,13 @@
     {
       "title1": "Watch As I Perform My Own Tracheotomy (working title)",
       "title2": "A girl alone in her room...",
+	  "defaultheader":"Watch As I Perform My Own Tracheotomy.",
       "endPage": 45
     },
     {
       "title1": "-",
       "title2": "-",
+	  "defaultheader":"Watch As I Perform My Own Tracheotomy.",
       "endPage": 999
     }
   ],
