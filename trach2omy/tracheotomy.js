@@ -155,12 +155,12 @@ window.addEventListener("keydown", function (event) {
 
   switch (event.key) {
     case "ArrowLeft":
-      if (document.getElementById("prevPage").style.display != "none" && isKeyNavAllowed) {
+      if (document.getElementById("prevPage").style.display != "none" && isKeyNavAllowed && event.repeat == false) {
 		  document.getElementById("prevPage").dispatchEvent(new Event('click')); 
 	  }
       break;
     case "ArrowRight":
-      if (document.getElementById("nextPage").style.display != "none" && isKeyNavAllowed) {
+      if (document.getElementById("nextPage").style.display != "none" && isKeyNavAllowed && event.repeat == false) {
 		  document.getElementById("nextPage").dispatchEvent(new Event('click')); 
 	  }
       break;
