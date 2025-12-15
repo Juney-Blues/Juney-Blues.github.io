@@ -245,7 +245,8 @@
       "img": "Ch2/Ch2Pg41.png",
       "date": "2023-09-10T04:14:04Z",
       "theme": "city",
-      "custom": true
+      "custom": true,
+	  "nonlooping": true
     },
     {
       "img": "Ch2/Ch2Pg42.png",

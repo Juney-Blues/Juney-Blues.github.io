@@ -97,6 +97,11 @@ const loadPage = async () => {
 	else {
 		isKeyNavAllowed = true;
 	}
+	//if non-looping page, reset animated elements
+	if(page.nonlooping != null) {
+		restartGif();
+	}
+	
 	// Scroll to top
 	window.scrollTo(0, 0);
 
@@ -130,6 +135,12 @@ const initCustomPage = () => {
 
 }
 
+// reload animated images. hacky but unfortunately there's not really a better way of doing this unless i'm stupid and so is every person i came across while googling
+const restartGif = () => {
+	let pageImages = pageContainer.querySelectorAll("img");
+	pageImages.forEach((element) => element.src = element.src.replace(/\?.*$/, "")+"?x="+Math.random());
+}
+
 // Handle click events
 const clickLink = (event, link) => {
 	event.preventDefault()
@@ -140,8 +151,6 @@ const clickLink = (event, link) => {
 window.onpopstate = (event) => {
 	loadPage();
 }
-
-
 
 document.querySelectorAll(".pageLink").forEach(a => {
 	a.addEventListener("click", evt => clickLink(evt, a.href))
