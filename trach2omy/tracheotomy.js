@@ -98,7 +98,7 @@ const loadPage = async () => {
 		isKeyNavAllowed = true;
 	}
 	//if non-looping page, reset animated elements
-	if(page.nonlooping != null) {
+	if(page.nonlooping == true) {
 		restartGif();
 	}
 	
@@ -106,7 +106,7 @@ const loadPage = async () => {
 	window.scrollTo(0, 0);
 
 	//load audio
-	setPageSound(page);
+	generate_audio(page);
 }
 
 // Init custom page events
@@ -138,7 +138,7 @@ const initCustomPage = () => {
 // reload animated images. hacky but unfortunately there's not really a better way of doing this unless i'm stupid and so is every person i came across while googling
 const restartGif = () => {
 	let pageImages = pageContainer.querySelectorAll("img");
-	pageImages.forEach((element) => element.src = element.src.replace(/\?.*$/, "")+"?x="+Math.random());
+	pageImages.forEach((element) => element.src += "?x=" + Date.now());
 }
 
 // Handle click events

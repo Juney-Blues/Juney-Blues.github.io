@@ -1,95 +1,69 @@
-// Ambience audio
-let backgroundAmbience1 = document.getElementById("backgroundAmbience1")
-let backgroundAmbience2 = document.getElementById("backgroundAmbience2")
-backgroundAmbience1.volume = 0;
-backgroundAmbience2.volume = 0;
+//code by flare, everyone say "thank you flare"
+//minor edits by juney, if something seems stupid, everyone say "what the hell, juney?"
+let fade_speed = 0.02
+let current_track = ""
+let current_time = 0
 
-let audioElements = [backgroundAmbience1, backgroundAmbience2]
+let generate_audio = (page) => {
+	
+	new_track = page.sound
 
-// Having 2 audio tracks so we can crossfade between them
-let ambActiveIndex = 0;
-let ambPageLink = ""
-let ambFadeTime = 1;
-let ambFadeInInterval;
-let ambFadeOutInterval;
-
-// Set up crossfade
-const ambCrossFadeAudio = () => {
-	// Clear intervals from previous page
-	if (ambFadeInInterval) { clearInterval(ambFadeInInterval) }
-	if (ambFadeOutInterval) { clearInterval(ambFadeOutInterval) }
-
-	// If durations are the same
-	if (getInactiveAudio().duration = getActiveAudio().duration) {
-		getActiveAudio().currentTime = getInactiveAudio().currentTime
+	// Don't make duplicate tracks
+	if (new_track == current_track) {
+		return;
 	}
 
-	// Fade out inactive audio
-	getInactiveAudio().volume = 1
-	ambFadeOutInterval = fadeAudioOut(getInactiveAudio(), 1, ambFadeTime)
-
-	// Fade in active audio
-	getActiveAudio.volume = 0;
-	ambFadeInInterval = fadeAudioIn(getActiveAudio(), 1, ambFadeTime)
-}
-backgroundAmbience1.onloadedmetadata = ambCrossFadeAudio
-backgroundAmbience2.onloadedmetadata = ambCrossFadeAudio
-
-// Music Audio (Currently Unused)
-// let activeMusicAudio = backgroundMusic1;
-// let pageMusicLink = ""
-
-// Set music and ambience
-const setPageSound = async (page) => {
-
-	// Fade between Ambience
-	pageAmbienceLink = page.ambience ? comicObject.linkPrefix + page.ambience : ""
-	if (pageAmbienceLink != getActiveAudio().src) {
-
-		// Switch active audio element
-		ambActiveIndex = (ambActiveIndex + 1) % 2
-
-		if (pageAmbienceLink) {
-			getActiveAudio().src = pageAmbienceLink
-		} else {
-			// Fade out inactive audio
-			getInactiveAudio().volume = 1
-			ambFadeOutInterval = fadeAudioOut(getInactiveAudio(), 1, ambFadeTime)
-		}
+    // Create Audio element
+    let new_audio      = document.createElement("audio")
+	new_audio.id       = new_track
+    new_audio.volume   = 0
+	new_audio.autoplay = "true"
+	new_audio.loop     = "true"
+	new_audio.controls = "true"
+	current_track      = new_audio.id
+	
+	// Sync audio tracks between pages
+	if (page.syncsound  == true) {
+		new_audio.currentTime = current_time 
 	}
+	else {
+		new_audio.currentTime = 0
+	}
+	
+	//undefined check, can't go earlier or other stuff breaks
+	if (new_track == undefined) {
+		return
+	}
+	else {
+		new_audio.src = comicObject.linkPrefix + new_track //moved to after the undefined check to avoid console errors - jnue
+		document.body.appendChild(new_audio)
+	}
+	
+    // Interval to manage audio track every seccond
+    let interval_is_playing = true
+    let audio_interval = setInterval(() => {
 
-	// Set music (Currently Unused)
-	// pageMusicLink = page.music ? comicObject.linkPrefix + page.music : ""
-	// if (pageMusicLink != activeMusic.src) {
-	// 	activeMusic.src = pageMusicLink;
-	// }
-}
+        // If the track is playing
+        if (interval_is_playing) {
+            // If a new track is created start fading out
+            if (current_track != new_audio.id) {
+                interval_is_playing = false
+            } else {
+                new_audio.volume = Math.min(new_audio.volume + fade_speed, 1)
+				current_time = new_audio.currentTime //doing it here means the sync will only be good as our interval time. if this is too janky maybe find a different way?
+			}
+        }
 
-let getActiveAudio = () => audioElements[ambActiveIndex]
-let getInactiveAudio = () => audioElements[(ambActiveIndex + 1) % 2]
+        // If track has stopped, start fading out
+        if (!interval_is_playing) {
+            if (new_audio.volume < 0.1) {
+                new_audio.remove()
+                clearInterval(audio_interval)
+            } else {
+                new_audio.volume = Math.max(new_audio.volume - fade_speed, 0)
+            }
+        }
 
-// Fade in
-let fadeAudioIn = (audioElement, setVolume, fadeTime) => {
-	let interval = setInterval(() => {
-		audioElement.volume += setVolume / fadeTime / 10
-		// Accounts for float error
-		if (audioElement.volume + setVolume / fadeTime / 10 >= setVolume) {
-			clearInterval(interval)
-			audioElement.volume = setVolume
-		}
-	}, 100)
-	return interval
-}
+    }, 100)
 
-// Fade out
-let fadeAudioOut = (audioElement, currentVolume, fadeTime) => {
-	let interval = setInterval(() => {
-		audioElement.volume -= currentVolume / fadeTime / 10
-		// Accounts for float error
-		if (audioElement.volume - currentVolume / fadeTime / 10 <= 0) {
-			clearInterval(interval)
-			audioElement.volume = 0
-		}
-	}, 100)
-	return interval
 }
