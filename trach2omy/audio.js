@@ -19,7 +19,7 @@ let generate_audio = (page) => {
     new_audio.volume   = 0
 	new_audio.autoplay = "true"
 	new_audio.loop     = "true"
-	new_audio.controls = "true"
+	//new_audio.controls = "true"
 	current_track      = new_audio.id
 	
 	// Sync audio tracks between pages
