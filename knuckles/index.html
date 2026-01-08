@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knuckles Simulator 2002</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon.png">
+    <link rel="stylesheet" href="./knuckles.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div id="pageTitle"></div>
+    </header>
+
+    <!-- Main -->
+    <div id="main">
+      <div id="pageContainer">
+        <div id="pageContent"></div>
+        <div id="pageNavigation">
+          <div id="adjacentPages">
+			<a id="firstPage"  class="pageLink" back-text="First.">First</a>
+            <a id="prevPage"   class="pageLink" back-text="Previous.">Previous</a>
+			<a id="randomPage" class="pageLink" back-text="Random.">Random</a>
+            <a id="nextPage"   class="pageLink" back-text="Next..">Next</a>
+			<a id="lastPage"   class="pageLink" back-text="Last.">Last</a>
+			<p id="backgroundHoverText"></p>
+          </div>
+		  <div id="comicSelector">
+			<select name="comic" id="comicSelect" class="blockCenter">
+			<option value="knuckles">Knuckles And Friends Go To Hell</option>
+			<option value="knuckles">Knuckles And Friends Special</option>
+			</select>
+		  </div>
+        </div>
+      </div>
+    </div>
+	
+	<div id="commentSection" class="blockCenter">
+	<p>Comments</p>
+		<textarea rows="5" maxlength="1024" placeholder="Write your comment here!" id="commentInput"></textarea>
+	</div>
+	
+    <!-- Footer -->
+    <div id="footerCredits">
+
+    </div>
+    <div id="fakeFooterBackground"></div>
+
+    <!-- Hidden -->
+    <div id="hidden" style="display: none;">
+	  <img src="" alt="" id="preloadNext">
+      <img src="" alt="" id="preloadPrev">
+      <script src="./knuckles.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+
+a {
+ text-decoration: none;
+}
+
+body {
+ image-rendering: pixelated;
+ background-image: linear-gradient(#444444, #444444, #aaaaaa);
+ background-attachment: fixed;
+ min-height: 100vh;
+}
+
+.header {
+  border-bottom: 4px black solid;
+  background-image: linear-gradient(#0004,#fff2,#0003);
+}
+
+#pageContainer {
+  border: 			2px #330000dd solid;
+  border-radius: 	12px;
+  background-image: radial-gradient(ellipse 140% 60%, #000000aa, #00000066, #ff0000dd);
+  
+  position: relative;
+  
+  width: fit-content;
+  min-width: 200px;
+  min-height: 200px;
+
+  padding: 24px;
+  margin: 128px auto 0;
+
+  z-index: 1;
+  position: relative;
+  
+  box-shadow: inset 5px 5px 3px #fffa, inset 2px 2px 2px #000, inset -3px -4px 10px #000a;
+}
+
+#pageContent {
+	margin:0 auto 0;
+}
+#pageContent img {
+	border:  2px solid black;
+	display: block;
+	margin:  0 auto 0;
+}
+#pageContent img:focus {
+	width:200%
+}
+
+#adjacentPages {
+  text-align: center;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.pageLink {
+  display:          inline-block;
+  padding:          2px;
+  border:           1px black solid;
+  border-radius:    12px;
+  background-color: #686868;
+  background-image: radial-gradient(ellipse 110% 50%, #484848, #686868);
+  color:            black;
+  text-shadow:      #443300 0 0 0;
+  box-shadow:       inset 1px 1px 0px #0003;
+  
+  transition: background-color 0.3s, background-image 0.3s, box-shadow 0.3s, color 0.2s, text-shadow 0.3s, font-size 1.2s, transform 1.1s;
+}
+
+.pageLink:hover {
+  background-color: #dd4848;
+  background-image: radial-gradient(#ff4444, #440000);
+  color:            white;
+  font-style:       italic;
+  font-size:        32px;
+  text-shadow:      #ffffff 2px 2px 4px;
+  box-shadow:       inset 1px 1px 2px #fffa, 2px 2px 2px black;
+  transform:        rotate(1turn);
+}
+
+.pageLink::before {
+	pointer-events: none;
+	color:       #0000;
+    font-size:   100px;
+	font-style:  italic;
+	font-weight: bold;
+	text-shadow: #fff0 0px 0px 20px;
+	position:    fixed; 
+	top:         64px; 
+	z-index:     -1;
+    content:     attr(back-text);
+	animation:   20s scroll infinite linear;
+	transition:  text-shadow 3s;
+}
+
+.pageLink:hover::before {
+	text-shadow: #fff5 0px 0px 10px;
+}
+
+#commentSection {
+	margin-top:64px;
+	max-width:min-content;
+	min-width: 30vh
+}
+
+#commentInput {
+	width: 600px;
+}
+
+.blockCenter {
+	display: block;
+	margin:0 auto 0;
+}
+
+/* Animations */
+
+@keyframes scroll{
+	0% {
+		left:100vw;
+	}
+	
+	100% {
+		left:-50vw;
+	}
+}
