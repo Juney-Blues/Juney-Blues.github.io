@@ -99,13 +99,51 @@ body {
 }
 
 #commentSection {
+	background-image: linear-gradient(#333f, #6664, #666f);
+	padding:8px;
 	margin-top:64px;
 	max-width:min-content;
-	min-width: 30vh
+	min-width: 30vh;
+	border: 1px solid black;
+	border-radius: 12px;
 }
 
 #commentInput {
 	width: 600px;
+}
+
+.comment {
+	background-image: linear-gradient(#b8b8b8, #57575745, #717171);
+	padding:8px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:8px;
+	width:90%;
+	min-height: 80px;
+	border: 1px solid black;
+	border-radius: 12px;
+}
+.commentPfp {
+	background-image: url("./images/knuckles-pfp.png");
+	width:  64px;
+	height: 64px;
+	border:1px solid black;
+}
+
+.pfpContainer{
+	display: block;
+	min-width: 80px;
+	min-height: 80px;
+	border-right: solid 1px black;
+	float: left;
+}
+.username{
+	margin:0;
+}
+.commentText{
+	display: inline-block;
+	margin-left: 16px;
+	margin-top: 32px;
 }
 
 .blockCenter {
