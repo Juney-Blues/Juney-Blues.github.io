@@ -42,12 +42,13 @@ const addComment = () =>{
 	commentNode.innerHTML = commentHTML;
 	commentDiv.prepend(commentNode);
 	
-	commentBox.value= "";
+	commentBox.value="";
 }
 
-document.querySelector("textarea").addEventListener("keydown", function (event) {
+document.querySelector("textarea").addEventListener("keyup", function (event) {
 
   if (event.key == "Enter") {
+	  event.preventDefault();
 	  addComment();
   }
 

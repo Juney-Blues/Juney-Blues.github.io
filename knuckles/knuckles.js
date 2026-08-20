@@ -3,41 +3,64 @@ var isKeyNavAllowed = true;
 let chapter;
 // LOAD COMIC OBJECT
 
-const comicLength = 11;
+var currentComic = 0;
+var comicLength = 1;
+const subPage = "/knuckles"
 
-let subPage = "/knuckles"
+const comicList = [
+	{
+		"title": "Knuckles and Friends go to Hell",
+		"imgprefix": "./knuckles/",
+		"length": 11
+	},
+	{
+		"title": "Knuckles and Friends go to Hell SPECIAL",
+		"imgprefix": "./SPECIAL/",
+		"length": 14
+	}
+]
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
+
+var comicSelector = document.getElementById("comicSelect");
+
+function changeComicValue() {
+   currentComic = comicSelector.value;
+   loadPage();
+}
+comicSelector.onchange = changeComicValue;
+
 
 const getUrlPage = () => {
 	const urlParams = new URLSearchParams(window.location.search);
 	const p = urlParams.get("pg")
 	return p ? p : "0"
 }
+
+const getUrlComic = () => {
+	const urlParams = new URLSearchParams(window.location.search);
+	const c = urlParams.get("c")
+	return c ? c : "0"
+}
+
+var currentComic = parseInt(getUrlComic());
+
 //all this code was by flare for tracheotomy, i have repurposed it because i am lazy! ty flare <3
+//i did fuck around with some things though. so if anything looks stupid that's why ^_^;
 const loadPage = async () => {
 	const pageIndex = parseInt(getUrlPage())
-	//console.log(pageIndex)
-
+	
+	comicLength = comicList[currentComic].length 
+	
 	// LOAD PAGE
 		// Load basic page
 		let img = document.createElement("img")
-		img.src = "./knuckles/" + pageIndex + ".png"
+		img.src = comicList[currentComic].imgprefix + pageIndex + ".png"
 		document.getElementById("pageContent").innerHTML = ""
 		document.getElementById("pageContent").append(img)
 
-	
-	/*
-	// Set Header Title
-	if (chapter.defaultheader != null){
-		document.getElementById("pageTitle").innerHTML = chapter.defaultheader;
-	}
-	if (page.header != null) {
-		document.getElementById("pageTitle").innerHTML = page.header;
-	}
-	*/
-	
 	// Set next and prev
 	const firstPage  = document.getElementById("firstPage")
 	const nextPage 	 = document.getElementById("nextPage")
@@ -45,11 +68,11 @@ const loadPage = async () => {
 	const lastPage   = document.getElementById("lastPage")
 	const randomPage = document.getElementById("randomPage")
 
-	firstPage.href  = subPage + "/?pg=" + "0"
-	nextPage.href   = subPage + "/?pg=" + (pageIndex + 1)
-	prevPage.href   = subPage + "/?pg=" + (pageIndex - 1)
-	lastPage.href   = subPage + "/?pg=" + comicLength
-	randomPage.href = subPage + "/?pg=" + getRandomInt(comicLength)
+	firstPage.href  = subPage + "/?c=" + currentComic + "&pg=" + "0"
+	nextPage.href   = subPage + "/?c=" + currentComic + "&pg=" + (pageIndex + 1)
+	prevPage.href   = subPage + "/?c=" + currentComic + "&pg=" + (pageIndex - 1)
+	lastPage.href   = subPage + "/?c=" + currentComic + "&pg=" + comicLength
+	randomPage.href = subPage + "/?c=" + currentComic + "&pg=" + getRandomInt(comicLength)
 	
 	nextPage.style.display = pageIndex > comicLength - 1 ? "none" : "inline-block"
 	lastPage.style.display = pageIndex > comicLength - 1 ? "none" : "inline-block"
